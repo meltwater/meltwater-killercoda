@@ -1,0 +1,16 @@
+{
+  "title": "Prometheus",
+  "description": "How to use Prometheus",
+  "courses": [
+    {
+      "course_id": "prometheus-lab-101",
+      "title": "Prometheus 101: Introduction",
+      "description": "Prometheus basics"
+    },
+    {
+      "course_id": "prometheus-lab-201",
+      "title": "Prometheus 201: Blackbox",
+      "description": "Synthetics testing with blackbox exporter and Prometheus"
+    }
+  ]
+}

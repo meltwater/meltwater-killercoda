@@ -1,0 +1,54 @@
+{
+  "title": "Terraform 101",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "15",
+  "details": {
+    "steps": [
+      {
+        "title": "State File",
+        "text": "step1.md"
+      },
+      {
+        "title": "Providers",
+        "text": "step2.md"
+      },
+      {
+        "title": "Data Sources and Resources",
+        "text": "step3.md"
+      },
+      {
+        "title": "Terraform Plan",
+        "text": "step4.md"
+      },
+      {
+        "title": "Terraform Apply",
+        "text": "step5.md"
+      },
+      {
+        "title": "Variables",
+        "text": "step6.md"
+      },
+      {
+        "title": "Terraform Destroy",
+        "text": "step7.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "preLaunch.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "main.tf"
+  ],
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

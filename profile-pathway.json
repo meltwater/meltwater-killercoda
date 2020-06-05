@@ -1,0 +1,31 @@
+{
+  "courses": [
+    {
+      "title": "Drone CD",
+      "description": "CI/CD with Drone.io will ensure students are comfortable with both the local exec and web experience of v1.x of the drone toolkit",
+      "id": "drone-cd"
+    },
+    {
+      "title": "ElastAlert",
+      "description": "How to write ElastAlert rules to alert on data in Elasticsearch",
+      "id": "elastalert"
+    },
+    {
+      "title": "Prometheus",
+      "description": "How to use Prometheus",
+      "id": "prometheus"
+    },
+    {
+      "title": "StatsD",
+      "description": "Basics of StatsD",
+      "id": "statsd"
+    },
+    {
+      "title": "Terraform",
+      "description": "How to use Terraform",
+      "id": "terraform"
+    }
+  ],
+  "scenarios": [
+  ]
+}

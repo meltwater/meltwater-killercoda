@@ -1,0 +1,66 @@
+{
+  "title": "Elastalert with Elasticsearch 5.2",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "15",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1- Start Elasticsearch and Heartbeat",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Create ElastAlert index",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - ElastAlert flatline example",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Start ElastAlert",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Trigger alert",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "preLaunch.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "config.yml",
+          "target": "~/"
+        },
+        {
+          "file": "example_flatline.yml",
+          "target": "~/"
+        },
+        {
+          "file": "docker-compose.yml",
+          "target": "~/"
+        },
+        {
+          "file": "heartbeat.yml",
+          "target": "~/"
+        }
+      ]
+    }
+  },
+  "files": [
+    "example_flatline.yml"
+  ],
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

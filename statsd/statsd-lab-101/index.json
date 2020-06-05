@@ -1,0 +1,45 @@
+{
+    "pathwayTitle": "StatsD",
+    "title": "Getting started with StatsD metrics",
+    "description": "Learn basics of StatsD metrics",
+    "difficulty": "beginner",
+    "time": "15 mintues",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1 - Monitoring Stack Intro",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2 - StatsD metric types",
+                "text": "step2.md"
+
+            },
+            {
+                "title": "Step 3 - Bring up statsd, graphite and carbon stack",
+                "text": "step3.md"    
+            },
+            {
+                "title": "step 4 - Test by sending some stats & visualize the metrics",
+                "text": "step4.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "courseBase.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+      "uilayout": "terminal",
+      "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
+      "showdashboard": true
+      
+    },
+    "backend": {
+        "imageid": "docker"
+    }
+}

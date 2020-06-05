@@ -1,0 +1,11 @@
+{
+    "title": "StatsD",
+    "description": "Basics of StatsD",
+    "courses": [
+      {
+        "course_id": "statsd-lab-101",
+        "title": "StatsD 101: Introduction",
+        "description": "StatsD basics"
+      }
+    ]
+  }
