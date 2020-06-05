@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c178157ff5d7bcc0e34f6e791f29e0a235a45d1cad0befd94ebc6c372c3643b0
-size 397
+version: '3.2'
+
+services:
+  elasticsearch:
+    image: elasticsearch:5.2.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      DISCOVERY_TYPE: single-node
+
+  heartbeat:
+    image: docker.elastic.co/beats/heartbeat:5.2.1
+    volumes:
+      - './heartbeat.yml:/usr/share/heartbeat/heartbeat.yml:ro'
+    depends_on:
+      - elasticsearch
+

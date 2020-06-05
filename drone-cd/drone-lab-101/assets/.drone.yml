@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c420b4ae95cbc1bf3f1f6de9dbd9e6b7cd106641e14ecd4aae13f2c26ec3b093
-size 1126
+---
+kind: pipeline
+type: docker
+name: example
+
+steps:
+  - name: myEnvironment
+    image: alpine:3.10
+    when:
+      status:
+        - success
+        - failure
+    environment:
+      SOMETHING_JUICY: oranges
+      SOMETHING_UNIQ: 1
+      SOMETHING_PRIVATE:
+        from_secret: something_private
+    commands:
+      - apk add --no-cache tree
+      - touch SOMETHING_STICKY.txt
+      - echo "glue" >> SOMETHING_STICKY.txt
+      - |
+        echo ------------------------------------------------------------
+        echo "Environment Variables"
+        echo ------------------------------------------------------------
+        env | sort -n
+        echo ------------------------------------------------------------
+        echo "Working Directory '$(pwd)'"
+        echo ------------------------------------------------------------
+        tree -R .
+        echo ------------------------------------------------------------
+        echo "Print File (Outside HereDoc)"
+        echo ------------------------------------------------------------
+      - cat $DRONE_WORKSPACE/SOMETHING_STICKY.txt
+
+trigger:
+  branch:
+    - master
+...

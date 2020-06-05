@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7494c40b8519491ec7ddbbcc9dc1bced9f411423dbdcb6f6fead541402727181
-size 337
+version: '2'
+services: 
+  registry:
+    image: registry:2
+    environment:
+      REGISTRY_AUTH: 'htpasswd'
+      REGISTRY_AUTH_HTPASSWD_REALM: 'Docker Registry'
+      REGISTRY_AUTH_HTPASSWD_PATH: '/auth/htpasswd'
+      REGISTRY_STORAGE_DELETE_ENABLED: 'true'
+    ports:
+      - 5000:5000
+      - 80:5000
+    volumes:
+      - /auth:/auth

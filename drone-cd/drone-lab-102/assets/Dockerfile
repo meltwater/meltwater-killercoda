@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:488e2c1dee413597ff093f6b347a0764cfc73b6606cf0ecb4f739960b70d2f2c
-size 190
+FROM busybox
+
+ADD index.html /www/index.html
+
+EXPOSE 8080
+
+# Create a basic webserver and run it until the container is stopped 
+CMD trap "exit 0;" TERM INT; httpd -p 8080 -h /www -f & wait

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6c5b16eb1b305a0d3556ad0491f13836826beb3073c44ed511479e4978db6aa7
-size 145
+rules_folder: alert_rules
+es_host: localhost
+es_port: 9200
+writeback_index: elastalert_status
+run_every:
+  seconds: 10
+buffer_time:
+  minutes: 1

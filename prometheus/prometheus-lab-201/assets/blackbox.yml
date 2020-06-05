@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:300e4f79e21e8003774b993f12f1aa0b7ece49259d5a4566863f0056a2b1e886
-size 91
+modules:
+  http_2xx:
+    prober: http
+    timeout: 5s
+    http:
+      fail_if_not_ssl: true
