@@ -7,7 +7,7 @@ services:
       - "9090:9090"
     links:
       - blackbox
-    command: --config.file=/class/prometheus.yml --storage.tsdb.path=/data --storage.tsdb.retention.time=4h
+    command: --config.file=/class/prometheus.yml --storage.tsdb.path=/data --storage.tsdb.retention.time=4h --web.enable-lifecycle
     volumes:
       - "/class:/class"
       - "/data:/data"
@@ -16,6 +16,6 @@ services:
     ports:
       - "9115:9115"
     dns: 8.8.8.8
-    command: --config.file=/class/blackbox.yml
+    command: --config.file=/class/blackbox.yml --web.enable-lifecycle
     volumes:
       - "/class:/class"

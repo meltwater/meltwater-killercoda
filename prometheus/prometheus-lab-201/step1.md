@@ -21,5 +21,3 @@ Blackbox acts much like a proxy running a test on a given target, yet instead of
      |                  |                |
      +                  +                +
 ```
-
-Click continue to see if the environment is ready for use.
