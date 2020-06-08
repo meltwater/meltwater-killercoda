@@ -23,6 +23,10 @@
         "title": "Step 4: Prometheus Scrape Job",
         "text": "step4.md",
         "verify": "step4-verify.sh"
+      },
+      {
+        "title": "Step 5: Configuration Load & Verification",
+        "text": "step5.md"
       }
     ],
     "intro": {
