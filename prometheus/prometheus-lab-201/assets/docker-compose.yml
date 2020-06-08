@@ -16,6 +16,6 @@ services:
     ports:
       - "9115:9115"
     dns: 8.8.8.8
-    command: --config.file=/class/blackbox.yml --web.enable-lifecycle
+    command: --config.file=/class/blackbox.yml
     volumes:
       - "/class:/class"
