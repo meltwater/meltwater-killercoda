@@ -8,11 +8,8 @@ Paste the following code beneath `modules:` section in the `blackbox.yml` file u
     http:
       bearer_token: e9005636c98a9d6db9d5267f7fcbdbb8
       no_follow_redirects: false
-      fail_if_ssl: false
       fail_if_body_not_matches_regexp:
         - "punchline\":"
-      tls_config:
-        insecure_skip_verify: false
 </pre>
 
 **NOTE**: You will see that the `bearer_token` has become part of the module, this allows the flexibility of running multiple checks to the same service using alternative `target` configuration in Prometheus.

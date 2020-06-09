@@ -9,7 +9,7 @@ Paste the following code as an additional `scrape_config:` for the service to po
       module: [api_jokes]
     static_configs:
       - targets:
-        - https://official-joke-api.appspot.com/jokes/ten
+        - http://dummy.restapiexample.com/api/v1/employees
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
