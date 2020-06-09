@@ -9,7 +9,7 @@
     },
     {
       "course_id": "prometheus-lab-201",
-      "title": "Prometheus 201: Blackbox",
+      "title": "Prometheus 201: Blackbox Exporter",
       "description": "Synthetics testing with blackbox exporter and Prometheus"
     }
   ]
