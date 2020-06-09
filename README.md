@@ -1,4 +1,5 @@
 <img align="right" width="200" src="https://www.katacoda.com/images/logos/katacoda/logo-1.png">
+[![Actions Status](https://github.com/meltwater/foundation-katakoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-katakoda/actions)
 
 # Foundation Katacoda Courseware
 
