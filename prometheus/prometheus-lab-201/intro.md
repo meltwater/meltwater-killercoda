@@ -1,4 +1,8 @@
-This scenario will attempt to cover in-detail prometheus.io's blackbox_exporter which allows for custom probing of endpoints over HTTP/HTTPS.  You can expect to learn the following:
+This scenario will attempt to cover in-detail prometheus.io's blackbox_exporter which allows for custom probing of endpoints over a multitude of protocols.  
+
+### Material
+
+You can expect to learn the following:
 
 * **Step 1**: Blackbox Basics
 * **Step 2**: Testing HTTP API Functionality
@@ -8,8 +12,15 @@ This scenario will attempt to cover in-detail prometheus.io's blackbox_exporter 
 * **Step 6**: Configuration Load & Verification
 * **Step 7**: Graphing & Using Blackbox Metrics
 
-Food for thought right from the start is that you are also able to form the following check types:
+### Prerequisites
 
-* TCP
-* DNS
-* ICMP
+* Basic knowledge of how prometheus functions (can be found in 101 course)
+* Basic understanding of exporters and their use in prometheus
+
+### Extra Credit
+
+> Something to think about right from the start is that while we will cover HTTP/HTTPS, you are also able to form the following check types:
+>
+> * TCP
+> * DNS
+> * ICMP

@@ -6,11 +6,11 @@ Now that we have both the blackbox module and the prometheus targets configured,
 
 Now lets verify the configurations are in and being properly polled in blackbox.  Click on (or refresh if already loaded) the 'Blackbox' tab in the course panel to the right.
 
-You should see the module you created now present for the prometheus pollers to scrape.
+You should see the module you created now present in the [configuration](https://[[HOST_SUBDOMAIN]]-9115-[[KATACODA_HOST]].environments.katacoda.com/config), for the prometheus pollers to scrape.
 
 ### Verify Prometheus
 
-If you click on (or refresh if already loaded) the 'Prometheus' tab in the course panel to the right, navigate to the 'Targets' tab and you should see your target scrape and its last result-set returned.
+If you click on (or refresh if already loaded) the 'Prometheus' tab in the course panel to the right, navigate to the '[Targets](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/new/targets)' tab and you should see your target scrape and its last result-set returned.
 
 **HINT**: We utilize Grafana to do our dashboarding which is extensible and provides rich graphics to all of the metrics that Prometheus supports:
 * [Blackbox Exporter Overview](https://grafana.com/grafana/dashboards/5345)
