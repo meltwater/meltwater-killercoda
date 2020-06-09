@@ -1,3 +1,5 @@
+#!/bin/bash
+set -e
 if grep -qi punchline /class/blackbox.yml; then 
   exit done
 else
