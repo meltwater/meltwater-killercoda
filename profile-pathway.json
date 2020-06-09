@@ -12,12 +12,12 @@
     },
     {
       "title": "Prometheus",
-      "description": "How to use Prometheus",
+      "description": "How to use Prometheus.io to monitor your applications and infrastructure.",
       "id": "prometheus"
     },
     {
       "title": "StatsD",
-      "description": "Basics of StatsD",
+      "description": "Basics of StatsD and custom push-based metrics.",
       "id": "statsd"
     },
     {
