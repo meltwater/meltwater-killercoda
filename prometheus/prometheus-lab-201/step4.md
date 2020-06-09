@@ -3,13 +3,14 @@ The prometheus side of the blackbox test now only has to concern itself with rew
 Paste the following code as an additional `scrape_config:` for the service to poll within the `prometheus.yml` file using the editor:
 
 <pre class="file" data-target="clipboard">
-  - job_name: 'blackbox-drone-api'
+  - job_name: 'employee-api'
     metrics_path: /probe
     params:
-      module: [api_jokes]
+      module: [api_employee]
     static_configs:
       - targets:
         - http://dummy.restapiexample.com/api/v1/employees
+        - http://dummy.restapiexample.com/api/v1/employee/1
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target

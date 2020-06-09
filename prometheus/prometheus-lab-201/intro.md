@@ -9,4 +9,4 @@ This scenario will attempt to cover in-detail prometheus.io's blackbox_exporter 
 * **Step 5**: Configuration Load & Verification
 
 
-Updated: 09:50 EDT
+Updated: 09:54 EDT
