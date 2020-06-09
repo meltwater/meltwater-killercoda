@@ -2,7 +2,7 @@ So lets see how blackbox works to test endpoints using basic HTTP requests prior
 
 ### Prometheus.io
 
-> If you click on the 'Blackbox' tab by the terminal, that should at this point load the blackbox UI, if not, you may just have to wait a second or two for the docker images to finish downloading (You can watch that in the terminal `timeout 60s watch -n2 docker ps -a`{{execute CLIENT}}).  
+> If you click on the 'Blackbox' tab by the terminal, that should at this point load the blackbox UI, if not, you may just have to wait a second or two for the docker images to finish downloading (You can watch that in the terminal `timeout 2m watch -n2 docker ps -a`{{execute CLIENT}}).  
 >
 > This page will load up a view of blackbox that allows for some debug activities with modules and last several tests run against the service.  Click the '[Probe prometheus.io for http_2xx](https://[[HOST_SUBDOMAIN]]-9115-[[KATACODA_HOST]].environments.katacoda.com/probe?target=prometheus.io&module=http_2xx)' for example to run a default status-check test agaisnt 'prometheus.io' and you will see sample output of what prometheus then scrapes.
 
