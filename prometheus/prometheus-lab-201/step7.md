@@ -6,7 +6,7 @@ Last step, with blackbox ought to be to load some type of meaningful graph so th
 
 > Perhaps this was mean, but I stuck an extra target in there which is purposefully failing so you can mess around with the queries.  The one that should be working in all this is the API call (or instance in this case) ending with `api/v1/employees`.  The thought here was to give you one that you could see working in all respects and one that is not.  
 >
-> **CHALENGE**: Why not go back and try manipulating the module checks to work with both endpoints since I mean, we are dealing with the same API segment.
+> * **CHALENGE**: Why not go back and try manipulating the module checks to work with both endpoints since I mean, we are dealing with the same API segment.
 >
 > You should see a few lines that are on your screen and able to show visibility of the metric with all of the excrutiating detail.  This is because while the graphs will aggregate the data, they are aggregating the detail, so you can ALWAYS drill in and see the full detail of the timeframe.  You can also affect the resolution however you like so that you see all the detail.
 
