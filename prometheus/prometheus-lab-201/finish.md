@@ -6,6 +6,7 @@ Thanks for taking our training course on blackbox_exporter.  We hope you learned
 * **Step 4**: Custom HTTP Blackbox Module
 * **Step 5**: Prometheus Scrape Job
 * **Step 6**: Configuration Load & Verification
+* **Step 7**: Graphing & Using Blackbox Metrics
 
 Remember, while you learned about HTTP based calls in this tutorial, blackbox also supports DNS, TCP, and ICMP based module types which are capable of doing deep-analysis of the services checked.
 

@@ -6,6 +6,7 @@ This scenario will attempt to cover in-detail prometheus.io's blackbox_exporter 
 * **Step 4**: Custom HTTP Blackbox Module
 * **Step 5**: Prometheus Scrape Job
 * **Step 6**: Configuration Load & Verification
+* **Step 7**: Graphing & Using Blackbox Metrics
 
 Food for thought right from the start is that you are also able to form the following check types:
 
