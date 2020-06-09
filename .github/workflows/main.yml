@@ -25,7 +25,7 @@ jobs:
     - id: install-katacoda-cli
       name: Install Katacoda CLI
       run: |
-        sudo npm -i katacoda-cli --global
+        sudo npm install katacoda-cli --global
     
     - id: validate-config
       name: Validate Katacoda Scenarios
