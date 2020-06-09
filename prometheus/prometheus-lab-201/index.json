@@ -18,19 +18,19 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 3: Custom HTTP Blackbox Module",
-        "text": "step3.md",
-        "verify": "step3-verify.sh"
-      },
-      {
-        "title": "Step 4: Prometheus Scrape Job",
+        "title": "Step 4: Custom HTTP Blackbox Module",
         "text": "step4.md",
         "verify": "step4-verify.sh"
       },
       {
-        "title": "Step 5: Configuration Load & Verification",
+        "title": "Step 5: Prometheus Scrape Job",
         "text": "step5.md",
         "verify": "step5-verify.sh"
+      },
+      {
+        "title": "Step 6: Configuration Load & Verification",
+        "text": "step6.md",
+        "verify": "step6-verify.sh"
       }
     ],
     "intro": {
