@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Prometheus",
-    "title": "Getting Started with Prometheus",
-    "description": "Learn how to start collecting system metrics with Prometheus",
+    "title": "Prometheus 101: Introduction",
+    "description": "Setup and configuration of prometheus.io service and scrape jobs including node_exporter for host metrics",
     "difficulty": "beginner",
     "time": "10-15 minutes",
     "details": {
