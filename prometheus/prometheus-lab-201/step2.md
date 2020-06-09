@@ -5,5 +5,3 @@ In our case, we are going to run some tests against a test rest service.  By run
 `curl -sH 'Authorization: Bearer e9005636c98a9d6db9d5267f7fcbdbb8' http://dummy.restapiexample.com/api/v1/employees | jq .`{{execute CLIENT}}
 
 We've all built them, a super nifty bearer authentication system that access an awesome programming interface (otherwise known as an API), there are databases and query engines and all sorts of stuff that could go wrong, but now how does one monitor this?
-
-Click continue to see if the environment is ready for use...

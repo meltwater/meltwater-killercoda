@@ -3,4 +3,4 @@ modules:
     prober: http
     timeout: 5s
     http:
-      fail_if_not_ssl: true
+      fail_if_not_ssl: false

@@ -1,15 +1,13 @@
-Lets take our test from before and now create a module to test out the API, since technicaly a 2xx HTTP response for this particular service technically only verifies through the loadbalancer behind it and is not a true functionality check on the service beneath.  Consider our employee api.  I mean, lets face it, if you don't get paid, your not REALLY an employee...
+So lets see how blackbox works to test endpoints using basic HTTP requests prior to testing for actual api content.  To do so we will be shifting around a bit between the UI and this page.
 
-Paste the following code beneath `modules:` section in the `blackbox.yml` file using the editor:
+If you click on the 'Blackbox' tab by the terminal, that should at this point load the blackbox UI, if not, you may just have to wait a second or two for the docker images to finish downloading (You can watch that in the terminal `watch -n2 docker ps -a`{{execute CLIENT}})
 
-<pre class="file" data-target="clipboard">
-  api_employee:
-    prober: http
-    http:
-      bearer_token: e9005636c98a9d6db9d5267f7fcbdbb8
-      no_follow_redirects: false
-      fail_if_body_not_matches_regexp:
-        - "employee_salary\":\"[0-9]{4,7}"
-</pre>
+This page will load up a view of blackbox that allows for some debug activities with modules and tests run against the service.  Click the linik for example to run a test agaisnt 'prometheus.io' and you will see sample output.
 
-**NOTE**: You will see that the `bearer_token` has become part of the module, this allows the flexibility of running multiple checks to the same service using alternative `target` configuration in Prometheus.
+We can run the same tests against our employee api, check this out:
+
+* https://[[HOST_SUBDOMAIN]]-[[KATACODA_HOST]].environments.katacoda.com/probe?target=dummy.restapiexample.com%2Fapi%2Fv1%2Femployees&module=http_2xx&debug=true
+
+What you see in the output is the full debug of the request as well as the metrics that are saved into prometheus for query.  However, while this check does show the power of the metrics obtained, since the service sits behind a loadbalancer it does not necessarily check the output for a filtered specific value returned.
+
+So next we will take what we have learned about blackbox and build a module inside blackbox to run a test against the employee endpoints for our REST API.

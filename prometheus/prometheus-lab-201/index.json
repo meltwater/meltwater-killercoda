@@ -11,8 +11,7 @@
       },
       {
         "title": "Step 2: Testing HTTP API Functionality",
-        "text": "step2.md",
-        "verify": "step2-verify.sh"
+        "text": "step2.md"
       },
       {
         "title": "Step 3: Custom HTTP Blackbox Module",
@@ -26,7 +25,8 @@
       },
       {
         "title": "Step 5: Configuration Load & Verification",
-        "text": "step5.md"
+        "text": "step5.md",
+        "verify": "step5-verify.sh"
       }
     ],
     "intro": {

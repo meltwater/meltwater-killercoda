@@ -1,17 +1,27 @@
-Now that we have both the blackbox module and the prometheus targets configured, we can now start collecting information, right?  Well, close enough... we need to cause the services to reload their configurations first, but that is all:
+The prometheus side of the blackbox test now only has to concern itself with rewriting destinations of the explicit `target`.  This is a fairly common override in prometheus allowing you to maintain centralized exporters for things like databases and other query-dependent services in their own infrastructure.
 
-`for p in 9090 9115; do curl -XPOST localhost:$p/-/reload; done`{{execute CLIENT}}
+Paste the following code as an additional `scrape_config:` for the service to poll within the `prometheus.yml` file using the editor:
 
-### Verify Blackbox
+<pre class="file" data-target="clipboard">
+  - job_name: 'employee-api'
+    metrics_path: /probe
+    params:
+      module: [api_employee]
+    static_configs:
+      - targets:
+        - http://dummy.restapiexample.com/api/v1/employees
+        - http://dummy.restapiexample.com/api/v1/employee/1
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox:9115
+</pre>
 
-Now lets verify the configurations are in and being properly polled in blackbox.  Click on (or refresh if already loaded) the 'Blackbox' tab in the course panel to the right.
+**EXTRA**: To briefly explain the `relabel_configs` segment for anyone unfamiliar with it:
+* `__address__`: This is the specific statically configured target of the test sequence you are running.
+* `__param_target`: Is a target parameter passed by reference in the URL query (Ex: `host/path?target=something`)
 
-You should see the module you created now present for the prometheus pollers to scrape.
-
-### Verify Prometheus
-
-If you click on (or refresh if already loaded) the 'Prometheus' tab in the course panel to the right, navigate to the 'Targets' tab and you should see your target scrape and its last result-set returned.
-
-**HINT**: We utilize Grafana to do our dashboarding which is extensible and provides rich graphics to all of the metrics that Prometheus supports:
-* [Blackbox Exporter Overview](https://grafana.com/grafana/dashboards/5345)
-* [Blackbox Exporter 0.14 for Prometheus](https://grafana.com/grafana/dashboards/9965)
+What we are accomplishing here is to pass the `target` on to the standard exporter in a way that will cause it to proxy the request made to a far-end scrape point through a known service.

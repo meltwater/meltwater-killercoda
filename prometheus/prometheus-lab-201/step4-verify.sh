@@ -1,4 +1,4 @@
-if grep -qi api_jokes /class/prometheus.yml; then 
+if grep -qi punchline /class/blackbox.yml; then 
   exit done
 else
   exit 1
