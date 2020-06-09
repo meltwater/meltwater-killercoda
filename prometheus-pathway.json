@@ -10,7 +10,7 @@
     {
       "course_id": "prometheus-lab-201",
       "title": "Prometheus 201: Blackbox Exporter",
-      "description": "Synthetics testing for HTTP/HTTPS, DNS, TCP, and ICMP endpoints with blackbox exporter and Prometheus.io"
+      "description": "Synthetics testing for HTTP, HTTPS, DNS, TCP, and ICMP endpoints with blackbox exporter and Prometheus.io"
     }
   ]
 }
