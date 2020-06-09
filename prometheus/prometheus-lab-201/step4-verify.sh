@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 if grep -qi punchline /class/blackbox.yml; then 
-  exit done
+  echo done
 else
-  exit 1
+  echo failed && exit 1; 
 fi
