@@ -31,10 +31,6 @@
         "title": "Step 6: Configuration Load & Verification",
         "text": "step6.md",
         "verify": "step6-verify.sh"
-      },
-      {
-        "title": "Step 7: Graphing & Using Blackbox Metrics",
-        "text": "step7.md"
       }
     ],
     "intro": {
