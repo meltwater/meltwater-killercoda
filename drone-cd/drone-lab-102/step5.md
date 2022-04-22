@@ -5,3 +5,5 @@ That's right, a nice test in production deal, you went through all the steps to 
 `docker run --rm -itp 8080:8080 localhost/demo-web:latest`{{execute CLINET}}
 
 Now you should see your sample website up and running in the 'Demo Web' tab. Congrats on finishing the course!
+
+**Note**: You will not receive completion if the website is not online and functional.

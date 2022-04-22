@@ -6,7 +6,7 @@ The following is the drone pipeline `step`, a pipeline can have multiple steps a
 
 <pre class="file" data-target="clipboard">
 - name: code-validation
-  image: philipharries/html_tidy:latest
+  image: philipharries/html_tidy
   commands:
     - tidy -eq *.htm*
   when:

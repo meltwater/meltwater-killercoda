@@ -8,7 +8,7 @@ The following is the drone pipeline `step`, a pipeline can have multiple steps a
 
 <pre class="file" data-target="clipboard">
 - name: docker-${DRONE_EVENT}
-  image: docker:19.03
+  image: docker
   when:
     event: [ push, pull_request ]
     status: [ success ]
