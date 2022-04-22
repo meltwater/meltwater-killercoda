@@ -61,6 +61,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "ubuntu:1804"
   }
 }

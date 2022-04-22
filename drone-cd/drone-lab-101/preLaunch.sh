@@ -1,1 +1,1 @@
-ssh root@host01 "docker pull alpine:3.10"
+ssh root@host01 "docker pull alpine:3"

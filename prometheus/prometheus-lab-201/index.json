@@ -80,6 +80,6 @@
     "uimessage1": "\u001b[32mTerminal for testing blackbox_exporter.\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "ubuntu1804"
+    "imageid": "ubuntu:1804"
   }
 }
