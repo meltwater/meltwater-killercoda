@@ -40,6 +40,6 @@
       
     },
     "backend": {
-        "imageid": "docker"
+        "imageid": "ubuntu:1804"
     }
 }
