@@ -39,4 +39,4 @@ You should see output in the run in the terminal window to the right...
 
 **NOTICE**: Take a look at the resultant lines, you should see the `SOMETHING_PRIVATE` value was even protected by drone from display through something like echoing out the environment in which it was stored.
 
-**NOTICE**: All the environment variables you can utilize to determine status at any step of a pipeline, there is a full list [here](https://docker-runner.docs.drone.io/configuration/environment/variables/).
+**NOTICE**: All the environment variables you can utilize to determine status at any step of a pipeline, there is a full list [here](https://docs.drone.io/pipeline/environment/reference/)
