@@ -1,5 +1,5 @@
 Terraform not only creates and updates resources, it also makes it easy to 
-[destroy](https://www.terraform.io/docs/commands/destroy.html) resources 
+[destroy](https://terraform.io/cli/commands/destroy) resources 
 managed by the configuration.
 
 Let's delete our `example.txt` file:

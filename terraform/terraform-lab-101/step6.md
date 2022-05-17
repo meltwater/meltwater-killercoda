@@ -1,4 +1,4 @@
-[Variables](https://www.terraform.io/docs/configuration/variables.html) allow
+[Variables](https://terraform.io/language/values/variables) allow
 values to be reused throughout your configuration without duplication. Add a 
 new variable called `foo` to `main.tf`:
 

@@ -5,5 +5,6 @@ Terraform.
 
 Further reading:
 
-* [Introduction to Terraform](https://www.terraform.io/intro/index.html)
-* [Terraform Docs](https://www.terraform.io/docs/index.html)
+* [Introduction to Terraform](https://terraform.io/intro)
+* [Terraform Docs](https://terraform.io/docs)
+* [Terraform Registry](https://registry.terraform.io)

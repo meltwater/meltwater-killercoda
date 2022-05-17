@@ -1,7 +1,7 @@
 Now we have enough configuration for Terraform to write our `example.txt` file. 
 
 Before applying our configuration, we should run a 
-[plan](https://www.terraform.io/docs/commands/plan.html) to be sure Terraform
+[plan](https://terraform.io/cli/commands/plan) to be sure Terraform
 will make the changes that we expect:
 
 ```
