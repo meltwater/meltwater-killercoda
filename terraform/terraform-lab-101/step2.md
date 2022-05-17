@@ -1,4 +1,4 @@
-A [provider](https://www.terraform.io/docs/providers/index.html) is an abstract
+A [provider](https://terraform.io/language/providers) is an abstract
 way of handling the underlying infrastructure and responsible for managing the
 lifecycle of a resource. Providers are responsible for understanding API
 interactions and exposing resources.
@@ -14,18 +14,18 @@ Katacoda editor on the right lets you edit the `main.tf` file.
 
 To constrain the provider version as suggested, add a `required_providers`
 block inside a `terraform` block. Let's do this for the
-[template](https://www.terraform.io/docs/providers/template/index.html)
+[template](https://registry.terraform.io/providers/hashicorp/template/latest/docs)
 provider. Copy the code below to `main.tf`:
 
 <pre class="file" data-filename="main.tf">
 terraform {
   required_providers {
-    template = "~> 2.1.2"
+    template = "~> 2.0"
   }
 }
 </pre>
 
-Now run [init](https://www.terraform.io/docs/commands/init.html)  and observe 
+Now run [init](https://terraform.io/cli/commands/init)  and observe 
 the output:
 
 ```
@@ -35,7 +35,7 @@ terraform init
 You should see output including these lines:
 
 ```
-- Downloading plugin for provider "template" (hashicorp/template) 2.1.2...
+- Downloading plugin for provider "template" (hashicorp/template) 2.2.0...
 
 Terraform has been successfully initialized!
 ```

@@ -1,4 +1,4 @@
-Now we are ready to [apply](https://www.terraform.io/docs/commands/apply.html)
+Now we are ready to [apply](https://terraform.io/cli/commands/apply)
 our configuration:
 
 ```
