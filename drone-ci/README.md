@@ -1,0 +1,1 @@
+CI with drone.io will ensure students are comfortable with both the local exec (and eventual web environment) of drone and its pipelines.
