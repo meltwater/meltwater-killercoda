@@ -14,7 +14,7 @@ We are looking to provide training senarios and groupings to help people through
 
 While we are looking to work with forks and take pull requests, we would ask your patience while we figure this out in our current sprint where we will be focusing on the first set of courses.
 
-### Step 1: Pathways
+### Step 1: Pathways !!!NO LONGER NEEDED!!!
 
 Pathways are found at the root level of this repository and can really be called anything you want them to as defined by JSON, but in reality, it equates to a hierarchy of course material based on the technologies we are sharing.  The top-level can contain as many courses (or senarios) as needed and tey can even be in multiple locations or other katacoda users even:
 
@@ -57,14 +57,13 @@ To edit a senario, please be considerate of the repo structure?
 
 ```
 .
-├── profile-pathway.json
+├── structure.json
 ├── service/
 │   ├── secenario/
 │   └── secenario/
 │       ├── assets/
 │       ├── index.json
 │       └── scenario files...
-└── service-pathway.json
 ```
 
 To create scenarios, it is highly recommended to download and install the [Katacoda CLI](https://www.katacoda.com/cli) which is deliverd as a node package.  Here are some of the most useful commands from using it so far:
@@ -75,15 +74,7 @@ To create scenarios, it is highly recommended to download and install the [Katac
 * `katacoda scenarios:remove`: Will remove steps from a scenario
 * `katacoda scenarios:validate`: super useful in figuring out if you have officially lost your marbles while creating the thing.
 
-### Step 3: Add To Profile Pathway
-
-This is the main pathway that houses the main course listing and senario listing for the account, if you don't add your course here, you won't find it online :-) For now, I would not place any loose scenarios, try placing them into some type of learning tree or course tree that can be built on?  Just a thought, then we don't end up with a pile of garbage but a nice clean page that we can send out with various learning tracks.
-
-Some helpful things to check stuff out at this level:
-
-* `katacoda validate:all`: Will validate the entire repo down to making sure step markdown is properly defined.
-
-### Step 4: Validate & Push
+### Step 3: Validate & Push
 
 Since you need to be able to try it out online, you can use a personal account to do the testing in and publish here when completed, but the `katacoda scenarios:validate` command will be your friend checking the syntax in json and the file structure you have created.
 
