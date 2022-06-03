@@ -1,31 +1,29 @@
 {
-  "courses": [
+  "items": [
     {
       "title": "Drone CI",
-      "description": "CI/CD with Drone.io will ensure students are comfortable with both the local exec and web experience of v1.x of the drone toolkit",
-      "id": "drone-ci"
+      "description": "CI with drone.io will ensure students are comfortable with both the local exec (and eventual web environment) of drone and its pipelines.",
+      "path": "drone-ci"
     },
     {
       "title": "ElastAlert",
       "description": "How to write ElastAlert rules to alert on data in Elasticsearch",
-      "id": "elastalert"
+      "path": "elastalert"
     },
     {
       "title": "Prometheus",
       "description": "How to use Prometheus.io to monitor your applications and infrastructure.",
-      "id": "prometheus"
+      "path": "prometheus"
     },
     {
       "title": "StatsD",
       "description": "Basics of StatsD and custom push-based metrics.",
-      "id": "statsd"
+      "path": "statsd"
     },
     {
       "title": "Terraform",
       "description": "How to use Terraform",
-      "id": "terraform"
+      "path": "terraform"
     }
-  ],
-  "scenarios": [
   ]
 }
