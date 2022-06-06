@@ -27,7 +27,8 @@
             },
             {
                 "title": "Step 5: Start Node Exporter",
-                "text": "step5.md"
+                "text": "step5.md",
+                "verify": "step5-verify.sh"
             },
             {
                 "title": "Step 6: Explore Data Returned",
