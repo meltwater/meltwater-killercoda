@@ -10,7 +10,7 @@ new versions with breaking changes will not be automatically installed by
 Terraform in the future.
 
 Terraform works based on configuration files, in this case `main.tf`. The
-Katacoda editor on the right lets you edit the `main.tf` file.
+Killercoda editor on the right lets you edit the `main.tf` file.
 
 To constrain the provider version as suggested, add a `required_providers`
 block inside a `terraform` block. Let's do this for the
