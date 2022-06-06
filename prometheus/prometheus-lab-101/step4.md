@@ -1,17 +1,18 @@
-With the containers launched, Prometheus will scrape and store the data based on the internals in the configuration.
+With your configuration saved, we will run Prometheus using docker.  Once loaded, Prometheus will start scraping using the configurations added in the previous step.
 
-## Dashboards
+Ensure you are on the 'Tab1' or 'Terminal Window' and click to execute the following command:
 
-The default Prometheus Dashboard reports internal information and provides a way to debug the metrics being collected. The dashboard can be viewed [here](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/)
+```
+docker run -d --net=host \
+    -v prometheus.yml:/etc/prometheus/prometheus.yml \
+    --name prometheus-server \
+    prom/prometheus:v2.33.5
+```{{execute}}
 
-The dashboard will report the status of the scraping and the different targets at via the [/targets](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets) page.
+Once the service has loaded, the [Prometheus Web UI]({{TRAFFIC_HOST1_9090}}) is viewable. The ensuing steps will explain the how to view and interpret the data prometheus is collecting.
 
-## Query Prometheus
+You should be able to run the following query in the [Prometheus Web UI]({{TRAFFIC_HOST1_9090}}):
 
-To query the underlying metrics and create graphs, visit the graph page on the Dashboard at https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/graph
-
-From here different metrics are queryable based on their name.
-
-For example, querying for `node_network_receive_bytes_total`{{copy}} will show how active the disk IO is. Querying using `node_cpu_seconds_total`{{copy}} will output the Docker Hosts CPU information.
-
-All the metrics scraped from [the metrics endpoint](https://[[HOST_SUBDOMAIN]]-9100-[[KATACODA_HOST]].environments.katacoda.com/metrics) are viewable.
+```
+up{job="prometheus"}
+```{{copy}}

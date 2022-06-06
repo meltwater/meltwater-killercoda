@@ -1,16 +1,22 @@
-To collect metrics related to a node it's required to run a Prometheus Node Exporter. Prometheus has many exporters that are designed to output metrics for a particular system, such as Postgres or MySQL.
-
-## Task
-
-Launch the Node Exporter container.
+The Prometheus server requires a configuration file `prometheus.yml` that defines the defaults for the scrape manager and service as well as the individual jobs themselves.  The first half of the configuration defines the defaults:
 
 ```
-docker run -d \
-  --net="host" \
-  --pid="host" \
-  -v "/:/host:ro,rslave" \
-  quay.io/prometheus/node-exporter:v0.18.1 \
-    --path.rootfs /host
-```{{execute}}
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+```{{copy}}
 
-If you're interested in seeing the raw metrics, they can be viewed with `curl localhost:9100/metrics`{{execute}}
+The second half defines the targets and ports that Prometheus should scrape data from. In this example, we have defined two targets running on different ports.
+
+```yaml
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets:
+          - '127.0.0.1:9090' # Prometheus Server
+          - '127.0.0.1:9100' # Node-Exporter
+        labels:
+          app: 'prometheus'
+```{{copy}}
+
+Please place the above segments (in their respective order) into the `prometheus.yml` file using the 'Editor' tab in this scenario and save.
