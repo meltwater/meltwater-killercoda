@@ -18,7 +18,7 @@ Now that we have configured the environment variables, lets run the pipeline so 
 
 **HINT**: You can override ANYthing available to you inside drone-server within the options, environment, and secrets files to match the particular event and function you want to test.  Some well used ones are below:
 
-`drone exec --repo someones/class --branch master --event push --secret-file secrets.txt --pipeline example` (Copy this code)
+`drone exec --repo someones/class --branch master --event push --secret-file secrets.txt --pipeline example`{{copy}}
 
 You should see output in the run in the terminal window to the right...
 
