@@ -16,7 +16,7 @@ So a 'successful' run will exit with a `0` status based on what you told your co
 
 Try executing the previous pipeline with a success/failure test at the end:
 
-`drone exec --repo someones/class --branch master --event push --secret-file secrets.txt --pipeline example && echo success || echo failed with $?` (Copy this code)
+`drone exec --repo someones/class --branch master --event push --secret-file secrets.txt --pipeline example && echo success || echo failed with $?`{{copy}}
 
 **HINT**: You can use [exit-codes in any linux-based system](https://shapeshed.com/unix-exit-codes/) to determine success/failure of a command and why.
 

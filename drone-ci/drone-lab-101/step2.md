@@ -22,4 +22,4 @@ In addition to these, here are just some of the ways you are free to extend this
 
 You thought this was just going to be reading?  NOT, make sure you are in the correct folder structure for the rest of this lab:
 
-`cd /class && drone --version`(Copy this code)
+`cd /class && drone --version`{{copy}}
