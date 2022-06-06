@@ -43,7 +43,8 @@
         "host01": [
             {
                 "file": "prometheus.yml",
-                "target": "~/"
+                "target": "/root/",
+                "chmod": "+w"
             }
         ]
     },
