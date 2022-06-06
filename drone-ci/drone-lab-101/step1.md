@@ -15,6 +15,6 @@
 
 For this scenario, we will be installing v1.x of the CLI which supports both local-exec and interactivity with drone server v2.x, so lets get that installed and ready:
 
-`curl -L https://github.com/harness/drone-cli/releases/download/v1.5.0/drone_linux_amd64.tar.gz | tar zx && sudo install -t /usr/local/bin drone`{{execute CLIENT}}
+`curl -L https://github.com/harness/drone-cli/releases/download/v1.5.0/drone_linux_amd64.tar.gz | tar zx && sudo install -t /usr/local/bin drone` (Copy this code)
 
 **NOTE**: Steps for your OS can be found [here](https://docs.drone.io/cli/install/).
