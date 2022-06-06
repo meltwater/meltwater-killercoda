@@ -7,7 +7,7 @@ docker run -d --net=host \
     -v prometheus.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-server \
     prom/prometheus:v2.33.5
-```{{execute}}
+```{{exec}}
 
 Once the service has loaded, the [Prometheus Web UI]({{TRAFFIC_HOST1_9090}}) is viewable. The ensuing steps will explain the how to view and interpret the data prometheus is collecting.
 
