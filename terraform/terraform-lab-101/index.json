@@ -42,10 +42,7 @@
       "text": "finish.md"
     }
   },
-  "files": [
-    "main.tf"
-  ],
-  "environment": {
+   "environment": {
     "uilayout": "editor-terminal"
   },
   "backend": {
