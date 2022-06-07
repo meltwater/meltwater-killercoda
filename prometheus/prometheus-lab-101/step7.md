@@ -11,6 +11,8 @@ Prometheus provides a function-based query language called PromQL that allows th
 
 Try a few sample PromQL queries for yourself:
 
+First open the [expression browser]({{TRAFFIC_HOST1_9090}}) (**NOTE**: hold down command / alt to open in new tab)
+
 * `prometheus_build_info`{{copy}} will show the build information for prometheus inside the labels of this metric
 * `count by (__name__)({job="prometheus"})`{{copy}} will show a listing of metrics with a count of timeseries for each, should you forget what is available
 * `rate(prometheus_http_requests_total{code="200"}[1m])`{{copy}} will show the per-minute rate of use for each path using the rate function
