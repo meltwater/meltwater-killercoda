@@ -9,5 +9,3 @@ Thanks for taking our training course on blackbox_exporter.  We hope you learned
 * **Step 7**: Graphing & Using Blackbox Metrics
 
 Remember, while you learned about HTTP based calls in this tutorial, blackbox also supports DNS, TCP, and ICMP based module types which are capable of doing deep-analysis of the services checked.
-
-Check out our other courses on katakoda.

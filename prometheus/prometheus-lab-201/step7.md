@@ -1,6 +1,6 @@
 Last step, with blackbox ought to be to load some type of meaningful graph so that we can show our ability to monitor what we just did, so lets do that.
 
-* https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/new/graph?g0.expr=probe_success%7Bjob%3D%27employee-api%27%7D&g0.tab=0&g0.stacked=0&g0.range_input=1h
+* {{TRAFFIC_HOST1_9090}}/graph?g0.expr=probe_success%7Bjob%3D%27employee-api%27%7D&g0.tab=0&g0.stacked=0&g0.range_input=1h
 
 ### What You Observed
 
