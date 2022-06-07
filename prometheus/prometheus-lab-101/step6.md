@@ -1,6 +1,8 @@
-With both services operational, Prometheus is already scraping (and storing) based on the configuration you provided in `prometheus.yml`.
+With both services operational, Prometheus is already scraping (and storing) based on the configuration you provided in `~/prometheus.yml`.
 
 ## Prometheus Internals
+
+While typically prometheus would be placed behind a dashboarding package like [Grafana](https://grafana.com), it does have a functional [expression browser]({{TRAFFIC_HOST1_9090}}) available at its root landing page on current builds.
 
 The status page of prometheus [/status]({{TRAFFIC_HOST1_9090}}/status) shows build and runtime information for the service itself.
 
@@ -14,13 +16,4 @@ Finally is [/config]({{TRAFFIC_HOST1_9090}}/config) which provides a sneak-peak 
 docker restart prometheus-server
 ```{{exec}}
 
-## Prometheus Query
-
-The root page of prometheus [here]({{TRAFFIC_HOST1_9090}}) shows a query editor that provides an auto-complete experience local to the instance.  It can be SUPER useful in diagnosing issues in an HA environment.
-
-Try a few sample PromQL queries for yourself:
-
-* `prometheus_build_info`{{copy}} will show the build information for prometheus.
-* `rate(prometheus_http_requests_total{code="200"}[1m])`{copy} will show the per-minute rate of use for each path.
-
-Try some of the other [metrics we exposed with node-exporter]({{TRAFFIC_HOST1_9100}}/metrics) which are all visible and sortable.
+**EXTRA CREDIT**: There is also a configurable reload endpoint for CD support.
