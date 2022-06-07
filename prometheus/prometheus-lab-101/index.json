@@ -2,11 +2,6 @@
     "title": "Prometheus 101: Introduction",
     "description": "Setup and configuration of prometheus.io service and scrape jobs including node_exporter for host metrics",
     "details": {
-        "intro": {
-            "text": "intro.md",
-            "foreground": "courseEnv.sh",
-            "background": "courseBase.sh"
-        },
         "steps": [
             {
                 "title": "Step 1: Time-Series Basics",
@@ -40,6 +35,11 @@
                 "text": "step7.md"
             }
         ],
+        "intro": {
+            "text": "intro.md",
+            "foreground": "courseEnv.sh",
+            "background": "courseBase.sh"
+        },
         "finish": {
             "text": "finish.md"
         },
@@ -47,14 +47,16 @@
             "host01": [
                 {
                     "file": "prometheus.yml",
-                    "target": "~/",
+                    "target": "/course/",
                     "chmod": "+w"
                 }
             ]
         }
     },
     "environment": {
-        "uilayout": "terminal"
+        "uilayout": "terminal",
+        "uieditorpath": "/course/",
+        "uimessage1": "\u001b[32mTerminal window for Prometheus 101...\u001b[m\r\n"
     },
     "backend": {
         "imageid": "ubuntu:2004"
