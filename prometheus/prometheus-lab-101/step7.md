@@ -7,7 +7,7 @@ Prometheus provides a function-based query language called PromQL that allows th
 * **Scalar** - a simple numeric floating point value
 * **String** - a simple string value; currently unused
 
-## Some Queries To Try
+**Some Queries To Try**
 
 Try a few sample PromQL queries for yourself:
 

@@ -1,4 +1,4 @@
-The Prometheus server requires a configuration file `~/prometheus.yml` that defines the global defaults for the service as well as the scrape configurations for the jobs themselves.  The first half of the configuration defines the defaults:
+The Prometheus server requires a configuration file `/course/prometheus.yml` that defines the global defaults for the service as well as the scrape configurations for the jobs themselves.  The first half of the configuration defines the defaults:
 
 ```
 global:
@@ -19,6 +19,6 @@ scrape_configs:
           app: 'prometheus'
 ```{{copy}}
 
-Please place the above segments (in their respective order) into the `~/prometheus.yml` file using the 'Editor' tab (or vi) in this scenario and save.
+Please place the above segments (in their respective order) into the `/course/prometheus.yml` file using the 'Editor' tab (or vi) in this scenario and save.
 
 **NOTE**: We will be checking to make sure you did your homework to continue :-)
