@@ -22,7 +22,7 @@ The following is the drone pipeline `step`, a pipeline can have multiple steps a
   volumes:
     - name: docker-socket
       path: /var/run/docker.sock
-</pre>
+</pre>{{copy}}
 
 **NOTICE**: I have added a `from_secret` phrase, while running exec mode you will have to add the secrets to a flat-file, in drone-server these secrets are stored in drone but as you can see not exported as output to the screen
 
@@ -32,11 +32,4 @@ The following is the drone pipeline `step`, a pipeline can have multiple steps a
 
 Right, so you tested your code was valid, but since we are creating an artifact, it is best to make sure you didn't botch something there too.  In the step above, you will notice that the third `command` is limited to a `push` event, so there is no permanent change if we do all of the other stuff as a test.  This can help ensure your PR's have been checked to the point of pushing he new code.
 
-`cd /class \
-&& drone exec --trusted \
-              --repo class \
-              --branch master \
-              --pipeline class \
-              --secret-file secrets.txt \
-              --event pull_request \
-&& echo success || echo failed with $?`{{execute CLIENT}}
+`cd /class && drone exec --trusted --repo class --branch master --pipeline class --secret-file secrets.txt --event pull_request && echo success || echo failed with $?`{{exec}}

@@ -4,13 +4,6 @@ Since we already have the build step in-place from the previous step, all that r
 
 **HINT**: Because we have made use of variables in the pipeline, triggering off of them to perform different tasks is as simple as changing the event in the runtime to see how it behaves.
 
-`cd /class \
-&& drone exec --trusted \
-              --repo class \
-              --branch master \
-              --pipeline class \
-              --secret-file secrets.txt \
-              --event push \
-&& echo success || echo failed with $?`{{execute CLIENT}}
+`cd /class && drone exec --trusted --repo class --branch master --pipeline class --secret-file secrets.txt --event push && echo success || echo failed with $?`{{exec}}
 
 Looking at the output, you should now see that there are `docker-push` steps where once were `docker-pull_request`, this will also push the docker image to the repo because the `DRONE_EVENT` variable would now match the event change we are testing out.
