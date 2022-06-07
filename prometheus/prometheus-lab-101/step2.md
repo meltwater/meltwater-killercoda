@@ -19,15 +19,15 @@ So the next natural question (with the metrics I shared in step 1) is what is sc
 ```
 
 1. Prometheus is configured with a `job`
-2. Job and targets is sent to scrape manager
-3. Target (host) has an exposed metrics endpoing
-4. Prometheus pulls the metrics via HTTP(S).
-5. Prometheus writes scraped metrics (adding `job` and `instance` labels along with any other configuration-based ones)
+2. Job and targets are sent to scrape manager
+3. Target (host) has an exposed metrics endpoint
+4. Prometheus pulls (scrapes) the metrics via HTTP(S)
+5. Prometheus writes scraped metrics (adding `job` and `instance` labels along with any other configuration-based labels)
 
-Below is output from one such scrape target if you were to poll the metrics-endpoint using `curl`
+Below are a few lines of output from one such scrape target if you were to poll the metrics-endpoint using `curl`
 
-```
-$ curl localhost:9090/metrics
+```bash
+$ curl host01:9090/metrics
 # HELP node_exporter_build_info A metric with a constant '1' value labeled by version, revision, branch, and goversion from which node_exporter was built.
 # TYPE node_exporter_build_info gauge
 node_exporter_build_info{branch="master",goversion="go1.17.2",revision="3e6f4ce627e588e9972e624f1f744c716e11b199",version="1.2.2"} 1
@@ -38,4 +38,4 @@ promhttp_metric_handler_errors_total{cause="gathering"} 0
 ...
 ```
 
-As mentioned, once prometheus scrapes these they will have `job` and `instance` labels minimally added for each metric retrieved, then the timeseries would be stored on disk.
+**NOTE**: This scrape you have probably noticed does not have `job` or `instance` labels.  This is because we have scraped the metrics using curl, so what you are observing is what prometheus sees when its scrape manager polls the endpoint itself...  Pretty neat troubleshooting tool, no?

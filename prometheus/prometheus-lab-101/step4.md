@@ -16,3 +16,5 @@ You should be able to run the following query in the [Prometheus Web UI]({{TRAFF
 ```
 up{job="prometheus"}
 ```{{copy}}
+
+**NOTE**: We will be checking for a running prometheus instance before you are allowed to continue.

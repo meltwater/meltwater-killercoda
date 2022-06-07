@@ -9,3 +9,4 @@ In this scenario, you'll learn:
 1. Pull-metrics basics
 2. How to configure and launch Prometheus
 3. Enable collection of host-based metrics
+4. How to query prometheus for a set of metrics

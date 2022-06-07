@@ -31,8 +31,12 @@
                 "verify": "step5-verify.sh"
             },
             {
-                "title": "Step 6: Explore Data Returned",
+                "title": "Step 6: Prometheus UI Basics",
                 "text": "step6.md"
+            },
+            {
+                "title": "Step 7: Prometheus Query Language",
+                "text": "step7.md"
             }
         ],
         "finish": {
@@ -43,7 +47,7 @@
         "host01": [
             {
                 "file": "prometheus.yml",
-                "target": "/root/",
+                "target": "/root",
                 "chmod": "+w"
             }
         ]
