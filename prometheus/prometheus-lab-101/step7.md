@@ -18,6 +18,8 @@ First open the [expression browser]({{TRAFFIC_HOST1_9090}}) (**NOTE**: hold down
 * `rate(prometheus_http_requests_total{code="200"}[1m])`{{copy}} will show the per-minute rate of use for each path using the rate function
 * `100 - ((node_filesystem_avail_bytes{device!~'rootfs'} * 100) / node_filesystem_size_bytes{device!~'rootfs'})`{{copy}} will show the percentage of disk usage from node-exporter exposed volumes by doing some math
 
-**EXTRA CREDIT**: Try some of the other [metrics we exposed with node-exporter]({{TRAFFIC_HOST1_9100}}/metrics) which are all visible and sortable
+> **EXTRA CREDIT**: 
+> Try some of the other [metrics we exposed with node-exporter]({{TRAFFIC_HOST1_9100}}/metrics) which are all visible and sortable
 
-**EXTRA CREDIT**: Looking for more?  Take some time to checkout [querying basics](https://prometheus.io/docs/prometheus/latest/querying/basics/)
+> **EXTRA CREDIT**: 
+> Looking for more?  Take some time to checkout [querying basics](https://prometheus.io/docs/prometheus/latest/querying/basics/)

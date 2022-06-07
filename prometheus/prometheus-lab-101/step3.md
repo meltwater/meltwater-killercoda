@@ -21,4 +21,5 @@ scrape_configs:
 
 Please place the above segments (in their respective order) into the `~/prometheus.yml` file using the 'Editor' tab (or vi) in this scenario and save.
 
-**NOTE**: We will be checking to make sure you did your homework to continue :-)
+> **NOTE**: 
+> We will be checking to make sure you did your homework to continue :-)
