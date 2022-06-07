@@ -62,7 +62,7 @@
         },
         {
           "file": "docker-compose.yml",
-          "target": "~/"
+          "target": "/class/"
         }
       ]
     }
