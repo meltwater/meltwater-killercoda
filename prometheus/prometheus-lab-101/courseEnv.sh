@@ -2,3 +2,4 @@
 
 export HOME=/course
 cd /course
+
