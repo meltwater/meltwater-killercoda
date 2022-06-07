@@ -1,21 +1,23 @@
-version: '2'
+version: '3'
 
 services:
   prometheus:
-    image: prom/prometheus:v2.18.1
+    image: prom/prometheus:v2.33.5
     ports:
       - "9090:9090"
     links:
       - blackbox
     command: --config.file=/class/prometheus.yml --storage.tsdb.path=/data --storage.tsdb.retention.time=4h --web.enable-lifecycle
     volumes:
-      - "/class:/class"
+      - "~/:/class"
       - "/data:/data"
   blackbox:
-    image: prom/blackbox-exporter:v0.16.0
+    image: prom/blackbox-exporter:v1.3.1
     ports:
       - "9115:9115"
+    links:
+      - prometheus
     dns: 8.8.8.8
     command: --config.file=/class/blackbox.yml
     volumes:
-      - "/class:/class"
+      - "~/:/class"

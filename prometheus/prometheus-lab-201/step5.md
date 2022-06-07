@@ -2,7 +2,7 @@ The prometheus side of the blackbox test now only has to concern itself with rew
 
 Paste the following code as an additional `scrape_config:` for the service to poll within the `prometheus.yml` file using the editor:
 
-<pre class="file" data-target="clipboard">
+```
   - job_name: 'employee-api'
     metrics_path: /probe
     params:
@@ -18,7 +18,7 @@ Paste the following code as an additional `scrape_config:` for the service to po
         target_label: instance
       - target_label: __address__
         replacement: blackbox:9115
-</pre>
+```{{copy}}
 
 **EXTRA**: To briefly explain the `relabel_configs` segment for anyone unfamiliar with it:
 * `__address__`: This is the specific statically configured target of the test sequence you are running.

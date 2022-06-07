@@ -1,8 +1,6 @@
 {
   "title": "Prometheus 201: Blackbox Exporter",
   "description": "Synthetics testing for HTTP, HTTPS, DNS, TCP, and ICMP endpoints with blackbox exporter and Prometheus.io",
-  "difficulty": "Intermediate",
-  "time": "15 minutes",
   "details": {
     "steps": [
       {
@@ -39,47 +37,34 @@
     ],
     "intro": {
       "text": "intro.md",
-      "background": "preLaunch.sh"
+      "foreground": "courseEnv.sh",
+      "background": "courseBase.sh"
     },
     "finish": {
       "text": "finish.md",
-      "background": "shutdown.sh"
+      "background": "courseEnd.sh"
     },
     "assets": {
       "host01": [
         {
           "file": "blackbox.yml",
-          "target": "/class/"
+          "target": "~/"
         },
         {
           "file": "prometheus.yml",
-          "target": "/class/"
+          "target": "~/"
         },
         {
           "file": "docker-compose.yml",
-          "target": "~/"
+          "target": "/course/"
         }
       ]
     }
   },
   "environment": {
-    "showdashboard": true,
-    "dashboards": [
-      {
-        "name": "Prometheus",
-        "href": "https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/new"
-      },
-      {
-        "name": "Blackbox",
-        "port": 9115
-      }
-    ],
-    "uilayout": "editor-terminal",
-    "uisettings": "yaml",
-    "uieditorpath": "/class/",
-    "uimessage1": "\u001b[32mTerminal for testing blackbox_exporter.\u001b[m\r\n"
+    "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu:1804"
+    "imageid": "ubuntu:2004"
   }
 }

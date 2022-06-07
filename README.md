@@ -1,6 +1,6 @@
-<img align="right" width="200" src="https://www.katacoda.com/images/logos/katacoda/logo-1.png">[![Actions Status](https://github.com/meltwater/foundation-katakoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-katakoda/actions)
+<img align="right" width="200" src="https://killercoda.com/img/kc_logo_beta.99b1cc0f.svg">[![Actions Status](https://github.com/meltwater/foundation-katakoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-katakoda/actions)
 
-# Foundation Katacoda Courseware
+# Foundation Killercoda Courseware
 
 The Foundation Mission seeks to provide Meltwater engineering teams a Paved Road of tools and services across the full Software Development Life Cycle, so that ultimately they only need to solve problems specific to their domain.  This repository will house some of the standard toolsets used inside Meltwater for others to see and share.
 
@@ -8,37 +8,32 @@ The Foundation Mission seeks to provide Meltwater engineering teams a Paved Road
 
 We are looking to provide training senarios and groupings to help people through not only a current understanding but future-proofing their learning with tracking of the courses they have already taken alongside newer ones as time progresses.  To access our courses, all you should need is a web browser and a good internet connection:
 
-- https://www.katacoda.com/mw-fou
+- https://www.killercoda.com/mw-fou
 
 ## Contributing
 
 While we are looking to work with forks and take pull requests, we would ask your patience while we figure this out in our current sprint where we will be focusing on the first set of courses.
 
-### Step 1: Pathways !!!NO LONGER NEEDED!!!
+### Step 1: Structure
 
-Pathways are found at the root level of this repository and can really be called anything you want them to as defined by JSON, but in reality, it equates to a hierarchy of course material based on the technologies we are sharing.  The top-level can contain as many courses (or senarios) as needed and tey can even be in multiple locations or other katacoda users even:
+There is a simplistic `structure.json` file that is present at the root of this repo and defines the top-level which can contain any number of courses beneath.  This json file works with the following options:
 
-* `courses`: Collection of scenarios that will make up the course.
-* `pathway_id`: Name of the scenario owner account. This is likely to be your username.
-* `course_id`: The ID of the scenario, created based on the directory name. If scenario is in a sub-course then include the directory name.
-* `id`: The ID of the scenario. If the scenario is in a sub-course, the directory name should not be included.
-* `title`: Title of the scenario to appear on the pathway layout
-* `description`: Description of the scenario to appear on the pathway layout
+* `path`: The sub-directory of the course which will contain scenarios
+* `title`: Title of the course to appear at the root / index
+* `description`: Description of the course to appear at the root / index
 
 ```json
 {
-  "title": "Drone CI/CD",
-  "description": "CI/CD with Drone.io will ensure students are comfortable with both the local exec and web experience of v1.x of the drone toolkit",
-  "courses": [
+  "items": [
     {
-      "course_id": "drone-lab-101",
-      "title": "Drone 101: Introduction",
-      "description": "Introduction to continuous improvement and continuous delivery with drone.io"
+      "path": "drone-ci",
+      "title": "Drone CI",
+      "description": "Introduction to continuous improvement drone.io"
     },
     {
-      "course_id": "drone-lab-102",
-      "title": "Drone 102: Pipeline Testing",
-      "description": "Build a pipeline to construct a docker container that will host a static website"
+      "path": "elastalert",
+      "title": "ElastAlert",
+      "description": "How to write ElastAlert rules to alert on data in Elasticsearch"
     }
   ]
 }
@@ -48,9 +43,10 @@ Pathways are found at the root level of this repository and can really be called
 
 Senarios are the brains of your content and can contain lots of nice features:
 
-* [Multiple Layouts](https://www.katacoda.com/docs/scenarios/layouts) to help present your information properly
-* [Markdown Enhancements](https://www.katacoda.com/docs/scenarios/markdown-syntax) to help format and minimize error
-* [Verifications](https://www.katacoda.com/docs/scenarios/index-json) to ensure the activities were done correctly
+* [Example Layouts](https://github.com/killercoda/scenario-examples)
+* [Quizes](https://github.com/clun/krscenarios/blob/main/queries/quiz.md)
+* [Documentation](https://killercoda.com/creators)
+* [Migration](https://itnext.io/katacoda-to-killercoda-migration-guide-d21961fc0c9b)
 * Much more...
 
 To edit a senario, please be considerate of the repo structure?
@@ -58,15 +54,15 @@ To edit a senario, please be considerate of the repo structure?
 ```
 .
 ├── structure.json
-├── service/
-│   ├── secenario/
-│   └── secenario/
-│       ├── assets/
-│       ├── index.json
-│       └── scenario files...
+├── course/
+    ├── secenario/
+    └── secenario/
+        ├── assets/
+        ├── index.json
+        └── scenario files...
 ```
 
-To create scenarios, it is highly recommended to download and install the [Katacoda CLI](https://www.katacoda.com/cli) which is deliverd as a node package.  Here are some of the most useful commands from using it so far:
+To create scenarios, follow the guides or an existing scenario and form a pull-request. This will start a testing proceedure visible on github actions.  Another option while available is to download and install the [Katacoda CLI](https://www.katacoda.com/cli) which is deliverd as a node package.  Here are some of the most useful commands from using it so far:
 
 * `katacoda scenarios:create`: This will create a templatized scenario (think about how many steps you will have first)
 * `katacoda scenarios:demo`: If you are like me and just wana see some code, this is your command, will generate a fully executable demo
@@ -80,10 +76,10 @@ Since you need to be able to try it out online, you can use a personal account t
 
 Once you are satisfied and are observing valid code, give it a push!  This will automatically post the resources into Katacoda (typically within a minute) and you are free to reload scenarios and PLEASE test your changes out?
 
-- https://www.katacoda.com/mw-fou
+- https://killercoda.com/mw-fou
 
 ## Maintianers
 
-This code-base and the Katacoda profile on katacoda.com are and will be maintained as a mission so that there is a consolidated place for code.
+This code-base and the Killercoda profile on killercoda.com are and will be maintained as a mission so that there is a consolidated place for code.
 
 - @meltwater-foundation
