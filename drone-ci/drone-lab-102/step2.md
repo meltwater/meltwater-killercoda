@@ -11,7 +11,7 @@ The following is the drone pipeline `step`, a pipeline can have multiple steps a
     - tidy -eq *.htm*
   when:
     event: [ pull_request ]
-</pre>
+</pre>{{copy}}
 
 **HINT**: The `when` clause can be implemented to define when it is important for the step to execute.  Automated testing is a reassurance of a first glance to any reviewers.
 
@@ -19,13 +19,7 @@ The following is the drone pipeline `step`, a pipeline can have multiple steps a
 
 Right, you have the code above in-place, let's test your `index.html` file using drone to see if you have proper html syntax!
 
-`cd /class \
-&& drone exec --trusted \
-              --repo class \
-              --branch master \
-              --pipeline class \
-              --event pull_request \
-&& echo success || echo failed with $?`{{execute CLIENT}}
+`cd /class && drone exec --trusted --repo class --branch master --pipeline class --event pull_request && echo success || echo failed with $?`{{exec}}
 
 **NOTICE**: This might take a few minutes if the host still has to download the `html_tidy` docker image before it gives feedback.
 
