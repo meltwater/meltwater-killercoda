@@ -6,7 +6,7 @@ What we are going to concentrate on is the steps needed to build and push the co
 
 The following is the drone pipeline `step`, a pipeline can have multiple steps and a configuration file can have multiple pipelines.  Copy the code below and place it into the steps level of the `class` pipeline in `/class/.drone.yml`.  Specifically, you will want to include this after the `code-validation` step from before:
 
-<pre class="file" data-target="clipboard">
+```
 - name: docker-${DRONE_EVENT}
   image: docker
   when:
@@ -22,7 +22,7 @@ The following is the drone pipeline `step`, a pipeline can have multiple steps a
   volumes:
     - name: docker-socket
       path: /var/run/docker.sock
-</pre>{{copy}}
+```{{copy}}
 
 **NOTICE**: I have added a `from_secret` phrase, while running exec mode you will have to add the secrets to a flat-file, in drone-server these secrets are stored in drone but as you can see not exported as output to the screen
 

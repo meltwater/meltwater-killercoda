@@ -15,5 +15,5 @@ Open the `/class/index.html` file using the katacoda editor (top right panel), t
 </html>
 ```{{copy}}
 
-```Now that you have it modified to your liking, lets build some checks to test the HTML code that has been added to the index.html file.```{{}}
+Now that you have it modified to your liking, lets build some checks to test the HTML code that has been added to the index.html file.
 
