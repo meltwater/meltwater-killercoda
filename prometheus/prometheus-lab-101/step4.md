@@ -4,7 +4,7 @@ Ensure you are on the 'Tab1' or 'Terminal Window' and click to execute the follo
 
 ```
 docker run -d --net=host \
-    -v prometheus.yml:/etc/prometheus/prometheus.yml \
+    -v ~/prometheus.yml:/etc/prometheus/prometheus.yml \
     --name prometheus-server \
     prom/prometheus:v2.33.5
 ```{{exec}}
