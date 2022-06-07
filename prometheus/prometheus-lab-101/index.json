@@ -45,16 +45,18 @@
         }
     },
     "assets": {
-        "host01": [
+        "host1": [
             {
                 "file": "prometheus.yml",
-                "target": "/course",
+                "target": "/course/",
                 "chmod": "+w"
             }
         ]
     },
     "environment": {
-        "uilayout": "terminal"
+        "uilayout": "terminal",
+        "uisettings": "yaml",
+        "uieditorpath": "/course/"
     },
     "backend": {
         "imageid": "ubuntu:2004"
