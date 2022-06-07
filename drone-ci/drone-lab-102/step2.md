@@ -21,6 +21,6 @@ Right, you have the code above in-place, let's test your `index.html` file using
 
 `cd /class && drone exec --trusted --repo class --branch master --pipeline class --event pull_request && echo success || echo failed with $?`{{exec}}
 
-**NOTICE**: This might take a few minutes if the host still has to download the `html_tidy` docker image before it gives feedback.
+**NOTICE**: Copy and paste the content of the code block above into the editor terminal, or open a new terminal tab in the Killercoder UI and click on the code     block to run it. The code might take a few minutes to run if the host still has to download the `html_tidy` docker image before it gives feedback.
 
 **HINT**: Pull requests / PR's are a fantastic way to ensure you have a hardened step for testing / review prior to a merge activity.
