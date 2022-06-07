@@ -4,14 +4,14 @@ So we are learning about CI still at this stage, and part of any pipeline should
 
 The following is the drone pipeline `step`, a pipeline can have multiple steps and a configuration file can have multiple pipelines.  Copy the code below and place it into the steps level of the `class` pipeline in the file `/class/.drone.yml` using the Katacoda editor (top right).
 
-<pre class="file" data-target="clipboard">
+```
 - name: code-validation
   image: philipharries/html_tidy
   commands:
     - tidy -eq *.htm*
   when:
     event: [ pull_request ]
-</pre>{{copy}}
+```{{copy}}
 
 **HINT**: The `when` clause can be implemented to define when it is important for the step to execute.  Automated testing is a reassurance of a first glance to any reviewers.
 
