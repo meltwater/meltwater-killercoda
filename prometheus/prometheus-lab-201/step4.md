@@ -12,4 +12,5 @@ Paste the following code beneath `modules:`{{}} section in the `blackbox.yml`{{}
         - "employee_salary\":\"[0-9]{4,7}"
 ```{{copy}}
 
-**NOTE**: You will see that the `bearer_token` has become part of the module, this allows the flexibility of running multiple checks to the same service using alternative `target` configurations in Prometheus.
+> **NOTE**:
+> You will see that the `bearer_token` has become part of the module, this allows the flexibility of running multiple checks to the same service using alternative `target` configurations in Prometheus.

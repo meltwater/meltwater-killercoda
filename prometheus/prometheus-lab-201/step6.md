@@ -10,8 +10,9 @@ You should see the module you created now present in the [configuration]({{TRAFF
 
 ### Verify Prometheus
 
-If you click on (or refresh if already loaded) the 'Prometheus' tab in the course panel to the right, navigate to the '[Targets]({{TRAFFIC_HOST1_9090}}/targets)' tab and you should see your target scronments.katacoda.comits last result-set returned.
+If you click on (or refresh if already loaded) the 'Prometheus' tab in the course panel to the right, navigate to the '[Targets]({{TRAFFIC_HOST1_9090}}/targets)' tab and you should see your target last result-set returned.
 
-**HINT**: We utilize Grafana to do our dashboarding which is extensible and provides rich graphics to all of the metrics that Prometheus supports:
-* [Blackbox Exporter Overview](https://grafana.com/grafana/dashboards/5345)
-* [Blackbox Exporter 0.14 for Prometheus](https://grafana.com/grafana/dashboards/9965)
+> **HINT**:
+> We utilize Grafana to do our dashboarding which is extensible and provides rich graphics to all of the metrics that Prometheus supports:
+> * [Blackbox Exporter Overview](https://grafana.com/grafana/dashboards/5345)
+> * [Blackbox Exporter 0.14 for Prometheus](https://grafana.com/grafana/dashboards/9965)

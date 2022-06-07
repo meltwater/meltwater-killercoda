@@ -20,8 +20,9 @@ Paste the following code as an additional `scrape_config:` for the service to po
         replacement: blackbox:9115
 ```{{copy}}
 
-**EXTRA**: To briefly explain the `relabel_configs` segment for anyone unfamiliar with it:
-* `__address__`: This is the specific statically configured target of the test sequence you are running.
-* `__param_target`: Is a target parameter passed by reference in the URL query (Ex: `host/path?target=something`)
+> **EXTRA**:
+> To briefly explain the `relabel_configs` segment for anyone unfamiliar with it:
+> * `__address__`: This is the specific statically configured target of the test sequence you are running.
+> * `__param_target`: Is a target parameter passed by reference in the URL query (Ex: `host/path?target=something`)
 
 What we are accomplishing here is to pass the `target` on to the standard exporter in a way that will cause it to proxy the request made to a far-end scrape point through a known service.
