@@ -47,16 +47,14 @@
             "host01": [
                 {
                     "file": "prometheus.yml",
-                    "target": "/course/",
+                    "target": "~/",
                     "chmod": "+w"
                 }
             ]
         }
     },
     "environment": {
-        "uilayout": "terminal",
-        "uieditorpath": "/course/",
-        "uimessage1": "\u001b[32mTerminal window for Prometheus 101...\u001b[m\r\n"
+        "uilayout": "terminal"
     },
     "backend": {
         "imageid": "ubuntu:2004"

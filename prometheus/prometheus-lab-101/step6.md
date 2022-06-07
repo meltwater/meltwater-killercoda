@@ -1,6 +1,8 @@
-With both services operational, Prometheus is already scraping (and storing) based on the configuration you provided in `/course/prometheus.yml`.
+With both services operational, Prometheus is already scraping (and storing) based on the configuration you provided in `~/prometheus.yml`.
 
 **Prometheus Internals**
+
+**NOTE**: Hold down command / alt when clicking to ensure the links open in a new tab.
 
 While typically prometheus would be placed behind a dashboarding package like [Grafana](https://grafana.com), it does have a functional [expression browser]({{TRAFFIC_HOST1_9090}}) available at its root landing page on current builds.
 

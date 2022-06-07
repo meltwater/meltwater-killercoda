@@ -16,7 +16,7 @@ So the next natural question (with the metrics I shared in step 1) is what is sc
                       |service/|
                       |exporter|
                       +--------+
-```
+```{{}}
 
 1. Prometheus is configured with a `job`
 2. Job and targets are sent to scrape manager
@@ -36,6 +36,6 @@ node_exporter_build_info{branch="master",goversion="go1.17.2",revision="3e6f4ce6
 promhttp_metric_handler_errors_total{cause="encoding"} 0
 promhttp_metric_handler_errors_total{cause="gathering"} 0
 ...
-```
+```{{}}
 
 **NOTE**: This scrape you have probably noticed does not have `job` or `instance` labels.  This is because we have scraped the metrics using curl, so what you are observing is what prometheus sees when its scrape manager polls the endpoint itself...  Pretty neat troubleshooting tool, no?

@@ -1,5 +1,6 @@
 #!/bin/bash
 
-export HOME=/course
-cd /course
-
+echo "------------------------------------------------------------"
+echo "Terminal window for use with Prometheus 101..."
+echo "------------------------------------------------------------"
+ls
