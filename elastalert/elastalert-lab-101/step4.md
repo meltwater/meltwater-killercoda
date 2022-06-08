@@ -1,7 +1,7 @@
 Start elastalert:
 ```
 elastalert --config config.yml --debug --rule example_flatline.yml
-```{{execute T2}}
+```{{exec}}
 
 You should see output similar to:
 ```
