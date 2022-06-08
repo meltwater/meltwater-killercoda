@@ -1,12 +1,12 @@
 Start processes with `docker-compose`:
 ```
 docker-compose up -d
-```{{execute}}
+```{{exec}}
 
 Verify elasticsearch is accessible:
 ```
 curl localhost:9200
-```{{execute}}
+```{{exec}}
 
 NOTE: it may take a few seconds for elasticsearch to initialize and respond.
 
@@ -35,4 +35,4 @@ heartbeat writes a document to the `heartbeat` index every five seconds.
 You can examine the structure of the index with curl:
 ```
 curl localhost:9200/heartbeat/?pretty
-```{{execute}}
+```{{exec}}

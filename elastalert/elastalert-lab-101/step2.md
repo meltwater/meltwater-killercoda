@@ -5,7 +5,7 @@ ElastAlert to restart and resume exactly where it left off.
 Create an index with `elastalert-create-index`:
 ```
 elastalert-create-index --index=elastalert_status --config config.yml
-```{{execute}}
+```{{exec}}
 
 This should complete with a message like:
 ```

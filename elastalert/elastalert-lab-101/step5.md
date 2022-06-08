@@ -2,7 +2,7 @@ Now let's stop the heartbeat process and watch our alert trigger.
 
 ```
 docker-compose stop heartbeat
-```{{execute T1}}
+```{{exec}}
 
 You should have two terminal tabs now, click "Terminal 2" to watch the output
 from ElastAlert.
