@@ -38,4 +38,5 @@ promhttp_metric_handler_errors_total{cause="gathering"} 0
 ...
 ```{{}}
 
-**NOTE**: This scrape you have probably noticed does not have `job` or `instance` labels.  This is because we have scraped the metrics using curl, so what you are observing is what prometheus sees when its scrape manager polls the endpoint itself...  Pretty neat troubleshooting tool, no?
+> **NOTE**: 
+> This scrape you have probably noticed does not have `job` or `instance` labels.  This is because we have scraped the metrics using curl, so what you are observing is what prometheus sees when its scrape manager polls the endpoint itself...  Pretty neat troubleshooting tool, no?

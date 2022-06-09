@@ -20,4 +20,4 @@ Blackbox acts much like a proxy running a test on a given target, yet instead of
      <------------------+                |
      |                  |                |
      +                  +                +
-```
+```{{}}
