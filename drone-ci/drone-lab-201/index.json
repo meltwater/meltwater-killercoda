@@ -1,0 +1,30 @@
+{
+  "title": "Drone 201: Paths Changed Plugin",
+  "description": "This course will teach its participants how to make use of Meltwater OSS Paths Changed plugin.",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1: Make it work",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "courseBase.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "k8s-env/**/*.*",
+          "target": "/k8s-env/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
