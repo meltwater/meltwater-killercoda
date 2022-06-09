@@ -30,4 +30,4 @@ jobs:
     - id: validate-config
       name: Validate Katacoda Scenarios
       run: |
-        katacoda validate:all --repo ${{ github.workspace }}
+        katacoda validate:all --repo ${{ github.workspace }} | echo
