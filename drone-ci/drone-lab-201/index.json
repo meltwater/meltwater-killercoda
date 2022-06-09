@@ -15,7 +15,7 @@
     "assets": {
       "host01": [
         {
-          "file": "k8s-env/**/*.*",
+          "file": "k8s-env/*.*",
           "target": "/k8s-env/"
         }
       ]
