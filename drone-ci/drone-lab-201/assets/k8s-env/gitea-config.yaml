@@ -21,10 +21,10 @@ data:
     
     [server]
     APP_DATA_PATH    = /data/gitea
-    DOMAIN           = localhost
-    SSH_DOMAIN       = localhost
+    DOMAIN           = gitea
+    SSH_DOMAIN       = gitea
     HTTP_PORT        = 3000
-    ROOT_URL         = http://localhost:3000/
+    ROOT_URL         = http://gitea:30000/
     DISABLE_SSH      = true
     SSH_PORT         = 22
     SSH_LISTEN_PORT  = 22
