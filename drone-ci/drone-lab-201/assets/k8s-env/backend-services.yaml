@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: drone
+spec:
+  type: NodePort
+  ports:
+    - name: drone-http-svc
+      protocol: TCP
+      port: 80
+      targetPort: drone-http
+      nodePort: 30080
+    - name: drone-rpc-svc
+      protocol: TCP
+      port: 9000
+      targetPort: drone-rpc
+      nodePort: 30900
+  selector:
+    app: drone

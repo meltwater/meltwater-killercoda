@@ -44,6 +44,10 @@ spec:
       containers:
         - name: gitea
           image: gitea/gitea:1.16.8
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
           volumeMounts:
             - name: gitea-config
               mountPath: /data/gitea/conf
