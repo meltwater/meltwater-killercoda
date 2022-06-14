@@ -4,42 +4,42 @@ available, in this example we will use the
 [flatline](https://elastalert.readthedocs.io/en/latest/ruletypes.html#flatline)
 rule type.
 
-As you read about each parameter, click the "Copy to Editor" button, at the end
+As you read about each parameter, click the "Copy to Editor" button and paste into `example_flatline.yml` in the editor window. At the end
 you will have a working alert rule.
 
 ### Common Options
 
 These options are common to any ElastAlert rule.
 
-<pre class="file" data-filename="example_flatline.yml" data-target="replace">
+```
 name: Flatline Example
-</pre>
+```{{copy}}
 
 **name:** The name of the rule. This *must be unique across all rules*. The name will be
 used in alerts and used as a key when writing and reading search metadata back
 from Elasticsearch.
 
-<pre class="file" data-filename="example_flatline.yml">
+```
 type: flatline
-</pre>
+```{{copy}}
 
 **type:** This can be any supported
 [rule type](https://elastalert.readthedocs.io/en/latest/ruletypes.html).
 
-<pre class="file" data-filename="example_flatline.yml">
+```
 index: heartbeat
-</pre>
+```{{copy}}
 
 **index:** The name of the index that will be searched. Wildcards can be used here, such
 as: `index: logstash-someapp-*`.
 
 
-<pre class="file" data-filename="example_flatline.yml">
+```
 filter:
 - query:
     query_string:
       query: "host: elasticsearch"
-</pre>
+```{{copy}}
 
 **filter:** A list of Elasticsearch query DSL filters that is used to query Elasticsearch.
 For more information writing filters, see
@@ -48,10 +48,10 @@ For more information writing filters, see
 In this example, each heartbeat document has the field `host: elasticsearch`, so
 we can write our alert based on that.
 
-<pre class="file" data-filename="example_flatline.yml">
+```
 alert:
 - debug
-</pre>
+```{{copy}}
 
 **alert:** Each rule may have any number of
 [alerts](https://elastalert.readthedocs.io/en/latest/ruletypes.html#alerts)
@@ -64,15 +64,15 @@ alert logs to standard output.
 
 These options are specific to flatline rules.
 
-<pre class="file" data-filename="example_flatline.yml">
+```
 threshold: 5
-</pre>
+```
 
 **threshold:** The minimum number of events for an alert *not* to be triggered.
 
-<pre class="file" data-filename="example_flatline.yml">
+```
 timeframe:
   seconds: 30
-</pre>
+```{{copy}}
 
 **timeframe:** The time period that must contain less than `threshold` events.

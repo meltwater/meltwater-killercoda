@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   elasticsearch:
-    image: elasticsearch:5.3.1
+    image: elasticsearch:5.3.0
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -11,7 +11,7 @@ services:
       DISCOVERY_TYPE: single-node
 
   heartbeat:
-    image: docker.elastic.co/beats/heartbeat:5.3.1
+    image: docker.elastic.co/beats/heartbeat:5.3.0
     volumes:
       - './heartbeat.yml:/usr/share/heartbeat/heartbeat.yml:ro'
     depends_on:
