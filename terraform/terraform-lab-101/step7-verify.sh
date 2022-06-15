@@ -1,0 +1,1 @@
+if [ ! -f ~/example.txt ]; then echo done; fi

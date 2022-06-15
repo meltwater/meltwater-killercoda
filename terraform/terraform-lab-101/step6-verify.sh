@@ -1,0 +1,1 @@
+if grep -qi variable ~/main.tf; then echo done; fi

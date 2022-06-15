@@ -1,0 +1,1 @@
+if grep -qi required_providers ~/main.tf; then echo done; fi

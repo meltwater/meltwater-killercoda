@@ -1,73 +1,73 @@
 [Variables](https://terraform.io/language/values/variables) allow
 values to be reused throughout your configuration without duplication. Add a 
-new variable called `foo` to `main.tf`:
+new variable called `foo`{{}} to `~/main.tf`{{}}:
 
-<pre class="file" data-filename="main.tf">
+```hcl
 variable "foo" {
   description = "a variable for our template"
   default = "rose"
 }
-</pre>
+```{{copy}}
 
 Now change the variable passed to the `example` template from
 
-```
+```text
 foo = "rose"
 ```
 
 to
 
-```
+```text
 foo = var.foo
 ```
 
-Now run a `plan`:
+Now run a `plan`{{}}:
 
-```
+```shell
 terraform plan
-```{{execute}}
+```{{exec}}
 
 You should see output including is line:
 
-```
+```text
 No changes. Infrastructure is up-to-date.
 ```
 
-Now change the `foo` variable from
+Now change the `foo`{{}} variable from
 
-```
+```text
 default = "rose"
 ```
 
 to
 
-```
+```text
 default = "daisy"
 ```
 
-Now run a `plan` again:
+Now run a `plan`{{}} again:
 
-```
+```shell
 terraform plan
-```{{execute}}
+```{{exec}}
 
 This time you should see some changes:
 
-```
+```text
   - A rose by any other name would smell as sweet.
   + A daisy by any other name would smell as sweet.
 ```
 
 Apply the changes:
 
-```
+```shell
 terraform apply
-```{{execute}}
+```{{exec}}
 
-Again, type `yes` when prompted.
+Again, type `yes`{{}} when prompted.
 
-View the contents of the file with the `cat` command:
+View the contents of the file with the `cat`{{}} command:
 
-```
-cat example.txt
-```{{execute}}
+```shell
+cat ~/example.txt
+```{{exec}}
