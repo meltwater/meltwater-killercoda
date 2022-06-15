@@ -66,7 +66,7 @@ These options are specific to flatline rules.
 
 ```
 threshold: 5
-```
+```{{copy}}
 
 **threshold:** The minimum number of events for an alert *not* to be triggered.
 
