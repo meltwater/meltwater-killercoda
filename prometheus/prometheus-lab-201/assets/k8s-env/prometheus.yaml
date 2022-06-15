@@ -23,6 +23,12 @@ spec:
       containers:
         - name: prometheus
           image: prom/prometheus:v2.33.5
+          args:
+            - "--config.file=/class/prometheus.yml"
+            - "--log.level=debug"
+            - "--storage.tsdb.path=/data"
+            - "--storage.tsdb.retention=4h"
+            - "--web.enable-lifecycle"
           resources:
             requests:
               memory: "256Mi"
@@ -42,9 +48,9 @@ spec:
       volumes:
         - name: prometheus-config
           hostPath:
-            path: ~/
+            path: /root
             type: Directory
         - name: prometheus-data
           hostPath:
-            path: /data/
+            path: /data
             type: Directory
