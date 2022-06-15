@@ -6,4 +6,5 @@ That's right, a nice test in production deal, you went through all the steps to 
 
 Now you should see your sample website up and running in the 'Demo Web' tab. Congrats on finishing the course!
 
-**Note**: You will not receive completion if the website is not online and functional.
+> **NOTE**: 
+> You will not receive completion if the website is not online and functional.

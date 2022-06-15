@@ -17,4 +17,5 @@ For this scenario, we will be installing v1.x of the CLI which supports both loc
 
 `curl -L https://github.com/harness/drone-cli/releases/download/v1.5.0/drone_linux_amd64.tar.gz | tar zx && sudo install -t /usr/local/bin drone`{{exec}}
 
-**NOTE**: Steps for your OS can be found [here](https://docs.drone.io/cli/install/).
+> **NOTE**: 
+> Steps for your OS can be found [here](https://docs.drone.io/cli/install/).

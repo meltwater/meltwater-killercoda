@@ -42,19 +42,19 @@
       "host01": [
         {
           "file": ".drone.yml",
-          "target": "/class/"
+          "target": "~/class/"
         },
         {
           "file": "secrets.txt",
-          "target": "/class/"
+          "target": "~/class/"
         },
         {
           "file": "Dockerfile",
-          "target": "/class/"
+          "target": "~/class/"
         },
         {
           "file": "index.html",
-          "target": "/class/"
+          "target": "~/class/"
         },
         {
           "file": "htpasswd",
@@ -62,18 +62,13 @@
         },
         {
           "file": "docker-compose.yml",
-          "target": "/class/"
+          "target": "~/"
         }
       ]
     }
   },
   "environment": {
-    "showdashboard": true,
-    "dashboards": [{"name": "Demo Web", "port": 8080}],
-    "uilayout": "editor-terminal",
-    "uisettings": "yaml",
-    "uieditorpath": "/class/",
-    "uimessage1": "\u001b[32mYour terminal for Drone CLI.\u001b[m\r\n"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu:1804"

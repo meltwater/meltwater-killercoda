@@ -1,4 +1,4 @@
-This scenario will attempt to cover in-detail the parts to and options available in the local execution environment that drone-cli affords.  This environnment should already have the drone-cli installed and ready for use, so lets look at what we will cover in this segment:
+This scenario will attempt to cover in-detail the parts to and options available in the local execution environment that drone-cli affords.  This environment should already have the drone-cli installed and ready for use, so lets look at what we will cover in this segment:
 
 * **Step 1**: Configure Static Website
 * **Step 2**: Code Validation / Testing
