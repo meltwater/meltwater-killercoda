@@ -39,20 +39,17 @@
       "host01": [
         {
           "file": ".drone.yml",
-          "target": "/class/"
+          "target": "~/class/"
         },
         {
           "file": "secrets.txt",
-          "target": "/class/"
+          "target": "~/class/"
         }
       ]
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
-    "uisettings": "yaml",
-    "uieditorpath": "/class/",
-    "uimessage1": "\u001b[32mYour terminal for Drone CLI.\u001b[m\r\n"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"

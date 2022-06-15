@@ -6,7 +6,8 @@ Drone pipelines (regardless of the runner selected) are built on `steps` that th
 * Steps can be run in in parallel through use of [`depends_on`](https://docs.drone.io/pipeline/docker/syntax/parallelism/) clauses to control the full sequencing of the pipeline.
 * Each pipeline has some pre-set [environment variables](https://docs.drone.io/pipeline/environment/reference/)  which can be used to augment scripting at each step
 
-**HINT**: If you choose to utilize parallelism, be sure you define a depnds_on block for each and every step defined, the first step depending on the invisible `clone` step.
+> **HINT**: 
+> If you choose to utilize parallelism, be sure you define a depnds_on block for each and every step defined, the first step depending on the invisible `clone` step.
 
 ### Exit Status
 So a 'successful' run will exit with a `0` status based on what you told your commands to do.  Any other exit code will result in a `failed` step.
@@ -16,8 +17,18 @@ So a 'successful' run will exit with a `0` status based on what you told your co
 
 Try executing the previous pipeline with a success/failure test at the end:
 
-`drone exec --repo someones/class --branch master --event push --secret-file secrets.txt --pipeline example && echo success || echo failed with $?`{{exec}}
+```shell
+drone exec \
+  --repo someones/class \
+  --branch master \
+  --event push \
+  --secret-file secrets.txt \
+  --pipeline example \
+  && echo success || echo failed with $?
+```{{exec}}
 
-**HINT**: You can use [exit-codes in any linux-based system](https://shapeshed.com/unix-exit-codes/) to determine success/failure of a command and why.
+> **HINT**: 
+> You can use [exit-codes in any linux-based system](https://shapeshed.com/unix-exit-codes/) to determine success/failure of a command and why.
 
-**HINT**: In the drone web UI, a green checkmark is the same thing as a zero exit code on the CLI, a success!
+> **HINT**: 
+> In the drone web UI, a green checkmark is the same thing as a zero exit code on the CLI, a success!
