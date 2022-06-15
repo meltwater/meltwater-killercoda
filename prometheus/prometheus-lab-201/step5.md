@@ -1,8 +1,8 @@
 The prometheus side of the blackbox test now only has to concern itself with rewriting destinations of the explicit `target`.  This is a fairly common override in prometheus allowing you to maintain centralized exporters for things like databases and other query-dependent services in their own infrastructure.
 
-Paste the following code as an additional `scrape_config:` for the service to poll within the `prometheus.yml` file using the editor:
+Paste the following code as an additional `scrape_config:` for the service to poll within the `~/prometheus.yml` file using the editor:
 
-```
+```yaml
   - job_name: 'employee-api'
     metrics_path: /probe
     params:

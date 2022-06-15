@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+  labels:
+    app: prometheus
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: prometheus
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: prometheus
+    spec:
+      containers:
+        - name: prometheus
+          image: prom/prometheus:v2.33.5
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+          volumeMounts:
+            - name: prometheus-config
+              mountPath: /class
+            - name: prometheus-data
+              mountPath: /data
+          livenessProbe:
+            httpGet:
+              path: /
+              port: prometheus-http
+          ports:
+            - name: prometheus-http
+              containerPort: 9090
+      volumes:
+        - name: prometheus-config
+          hostPath:
+            path: ~/
+            type: Directory
+        - name: prometheus-data
+          hostPath:
+            path: /data/
+            type: Directory
