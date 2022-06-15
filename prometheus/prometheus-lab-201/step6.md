@@ -15,4 +15,4 @@ If you click on (or refresh if already loaded) the 'Prometheus' tab in the cours
 > **HINT**:
 > We utilize Grafana to do our dashboarding which is extensible and provides rich graphics to all of the metrics that Prometheus supports:
 > * [Blackbox Exporter Overview](https://grafana.com/grafana/dashboards/5345)
-> * [Blackbox Exporter 0.14 for Prometheus](https://grafana.com/grafana/dashboards/9965)
+> * [Blackbox Exporter for Prometheus](https://grafana.com/grafana/dashboards/9965)
