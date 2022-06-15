@@ -9,7 +9,7 @@ Paste the following code beneath `modules:`{{}} section in the `~/blackbox.yml`{
       bearer_token: e9005636c98a9d6db9d5267f7fcbdbb8
       no_follow_redirects: false
       fail_if_body_not_matches_regexp:
-        - "employee_salary\":\"[0-9]{4,7}"
+        - "employee_salary\":[0-9]{4,7}"
 ```{{copy}}
 
 > **NOTE**:
