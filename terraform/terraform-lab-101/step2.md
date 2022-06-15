@@ -9,33 +9,35 @@ constrain the acceptable provider versions via configuration, to ensure that
 new versions with breaking changes will not be automatically installed by
 Terraform in the future.
 
-Terraform works based on configuration files, in this case `main.tf`. The
-Killercoda editor on the right lets you edit the `main.tf` file.
+Terraform works based on configuration files, in this case `~/main.tf`{{}}. The
+Killercoda editor on the right lets you edit the `~/main.tf`{{}} file.
 
-To constrain the provider version as suggested, add a `required_providers`
-block inside a `terraform` block. Let's do this for the
+To constrain the provider version as suggested, add a `required_providers`{{}}
+block inside a `terraform`{{}} block. Let's do this for the
 [template](https://registry.terraform.io/providers/hashicorp/template/latest/docs)
-provider. Copy the code below to `main.tf`:
+provider. Copy the code below to `~/main.tf`{{}} using the editor tab:
 
-<pre class="file" data-filename="main.tf">
+```hcl
 terraform {
   required_providers {
-    template = "~> 2.0"
+    template = {
+      version = "~> 2.0"
+    }
   }
 }
-</pre>
+```{{copy}}
 
 Now run [init](https://terraform.io/cli/commands/init)  and observe 
 the output:
 
-```
+```shell
 terraform init
-```{{execute}}
+```{{exec}}
 
 You should see output including these lines:
 
-```
+```text
 - Downloading plugin for provider "template" (hashicorp/template) 2.2.0...
 
 Terraform has been successfully initialized!
-```
+```{{}}

@@ -1,8 +1,6 @@
 {
   "title": "Terraform 101",
-  "description": "",
-  "difficulty": "Beginner",
-  "time": "15",
+  "description": "This will provide the user with a brief introduction to terraform and state handling.",
   "details": {
     "steps": [
       {
@@ -11,15 +9,18 @@
       },
       {
         "title": "Providers",
-        "text": "step2.md"
+        "text": "step2.md",
+        "verify": "step2-verify.sh"
       },
       {
         "title": "Data Sources and Resources",
-        "text": "step3.md"
+        "text": "step3.md",
+        "verify": "step3-verify.sh"
       },
       {
         "title": "Terraform Plan",
-        "text": "step4.md"
+        "text": "step4.md",
+        "verify": "step4-verify.sh"
       },
       {
         "title": "Terraform Apply",
@@ -27,11 +28,13 @@
       },
       {
         "title": "Variables",
-        "text": "step6.md"
+        "text": "step6.md",
+        "verify": "step6-verify.sh"
       },
       {
         "title": "Terraform Destroy",
-        "text": "step7.md"
+        "text": "step7.md",
+        "verify": "step7-verify.sh"
       }
     ],
     "intro": {
@@ -43,7 +46,7 @@
     }
   },
    "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"

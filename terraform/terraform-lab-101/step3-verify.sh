@@ -1,0 +1,1 @@
+if grep -qi local_file ~/main.tf; then echo done; fi
