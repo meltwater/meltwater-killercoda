@@ -23,7 +23,8 @@ spec:
       containers:
         - name: blackbox
           image: prom/blackbox-exporter:v0.21.0
-          command: 
+          command: ["blackbox_exporter"]
+          args: 
             - "--config.file=/class/blackbox.yml"
           resources:
             requests:
@@ -34,7 +35,7 @@ spec:
               mountPath: /class
           livenessProbe:
             httpGet:
-              path: /
+              path: /health
               port: blackbox-http
           ports:
             - name: blackbox-http
@@ -42,5 +43,5 @@ spec:
       volumes:
         - name: blackbox-config
           hostPath:
-            path: ~/
+            path: /root
             type: Directory
