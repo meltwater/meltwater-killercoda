@@ -5,7 +5,8 @@
     "steps": [
       {
         "title": "Step 1: Blackbox Basics",
-        "text": "step1.md"
+        "text": "step1.md",
+        "foreground": "step1-foreground.sh"
       },
       {
         "title": "Step 2: Testing HTTP API Functionality",
@@ -37,15 +38,17 @@
     ],
     "intro": {
       "text": "intro.md",
-      "foreground": "courseEnv.sh",
       "background": "courseBase.sh"
     },
     "finish": {
-      "text": "finish.md",
-      "background": "courseEnd.sh"
+      "text": "finish.md"
     },
     "assets": {
       "host01": [
+        {
+          "file": "k8s-env/*.*",
+          "target": "~/"
+        },
         {
           "file": "blackbox.yml",
           "target": "~/"
@@ -53,10 +56,6 @@
         {
           "file": "prometheus.yml",
           "target": "~/"
-        },
-        {
-          "file": "docker-compose.yml",
-          "target": "/course/"
         }
       ]
     }
@@ -65,6 +64,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }

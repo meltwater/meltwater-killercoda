@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+spec:
+  type: NodePort
+  ports:
+    - name: prometheus-svc
+      protocol: TCP
+      port: 9090
+      targetPort: prometheus-http
+      nodePort: 30090
+  selector:
+    app: prometheus
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blackbox
+spec:
+  type: NodePort
+  ports:
+    - name: blackbox-svc
+      protocol: TCP
+      port: 9115
+      targetPort: blackbox-http
+      nodePort: 30115
+  selector:
+    app: blackbox
