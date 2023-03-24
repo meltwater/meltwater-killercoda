@@ -3,14 +3,19 @@ The prometheus side of the blackbox test now only has to concern itself with rew
 Paste the following code as an additional `scrape_config:` for the service to poll within the `~/prometheus.yml` file using the editor:
 
 ```yaml
-  - job_name: 'employee-api'
+  - job_name: 'headers-api'
     metrics_path: /probe
     params:
-      module: [api_employee]
+      module: [api_headers]
     static_configs:
       - targets:
-        - http://dummy.restapiexample.com/api/v1/employees
-        - http://dummy.restapiexample.com/api/v1/employee/1
+        - https://httpbin.org/get
+        labels:
+        - working
+      - targets:
+        - https://httpbin.org/status/403
+        labels:
+        - broken
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
