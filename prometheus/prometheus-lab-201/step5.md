@@ -11,11 +11,11 @@ Paste the following code as an additional `scrape_config:` for the service to po
       - targets:
         - https://httpbin.org/get
         labels:
-        - working
+          api_status: working
       - targets:
         - https://httpbin.org/status/403
         labels:
-        - broken
+          api_status: broken
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
