@@ -10,7 +10,7 @@ So lets see how blackbox works to test endpoints using basic HTTP requests prior
 
 > Lets test this out on our own API from the last step so that we can see how it works.  Since it is a basic HTTP test, we can use the same module against our employee api and since it is looking for a 2xx status code response, it should succeed.  Check this out:
 >
-> * {{TRAFFIC_HOST1_30115}}/probe?target=dummy.restapiexample.com%2Fapi%2Fv1%2Femployees&module=http_2xx&debug=true
+> * {{TRAFFIC_HOST1_30115}}/probe?target=httpbin.org%2Fgit&module=http_2xx&debug=true
 >
 > What you see in the output is the full debug of the request as well as the metrics that are saved into prometheus for query.  However, while this check does show the power of the metrics obtained, since the service sits behind a loadbalancer it does not necessarily check the output for a filtered specific value returned.
 
