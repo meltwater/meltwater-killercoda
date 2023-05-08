@@ -1,8 +1,6 @@
-<img align="right" width="200" src="assets/kllr.png">
-
 # Foundation Killercoda Courseware | [![Actions Status](https://github.com/meltwater/foundation-killercoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-killercoda/actions)
 
-The Foundation Mission seeks to provide Meltwater engineering teams a Paved Road of tools and services across the full Software Development Life Cycle, so that ultimately they only need to solve problems specific to their domain.  This repository will house some of the standard toolsets used inside Meltwater for others to see and share.
+<img align="right" width="200" src="assets/kllr.png">The Foundation Mission seeks to provide Meltwater engineering teams a Paved Road of tools and services across the full Software Development Life Cycle, so that ultimately they only need to solve problems specific to their domain.  This repository will house some of the standard toolsets used inside Meltwater for others to see and share.
 
 ## Taking Courses
 
