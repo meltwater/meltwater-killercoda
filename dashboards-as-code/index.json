@@ -4,27 +4,12 @@
     "details": {
       "steps": [
         {
-          "title": "State File",
+          "title": "Step 1 : Grafana Playground ",
           "text": "step1.md"
         },
         {
-          "title": "Providers",
-          "text": "step2.md",
-          "verify": "step2-verify.sh"
-        },
-        {
-          "title": "Data Sources and Resources",
-          "text": "step3.md",
-          "verify": "step3-verify.sh"
-        },
-        {
-          "title": "Terraform Plan",
-          "text": "step4.md",
-          "verify": "step4-verify.sh"
-        },
-        {
-          "title": "Terraform Apply",
-          "text": "step5.md"
+          "title": "Step 2: Install Grafanalib",
+          "text": "step2.md"
         }
       ],
       "intro": {
@@ -33,7 +18,16 @@
       },
       "finish": {
         "text": "finish.md"
-      }
+      },
+      "assets": {
+        "host01": [
+            {
+                "file": "dashboard.py",
+                "target": "~/",
+                "chmod": "+w"
+            }
+        ]
+    }
     },
      "environment": {
       "uilayout": "terminal"
