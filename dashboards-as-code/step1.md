@@ -1,7 +1,27 @@
-Make sure Grafana playground is avaiable:
+Bring up the Grafana playground with prometheus datasource, which will be used for uploading the dashboard managed as code.
+
+Copy paste the below command in the terminal and bring up the docker images for Grafana playground
+
 ```
-http://localhost:3001/
+cd grafana/devenv
+```{{copy}}
+
 ```
+./setup.sh
+```{{copy}}
+
+```cd ..
+```{{copy}}
+
+```
+make devenv sources=grafana,prometheus
+```{{copy}}
+
+# To tear down later: `make devenv-down`
+
+Now, verify you can access grafana UI by clicking the below link
+[Grafana UI]({{TRAFFIC_HOST1_3001}})
+
 
 Log in with user `admin` and password `admin`.
 
