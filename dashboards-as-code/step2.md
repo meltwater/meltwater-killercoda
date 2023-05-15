@@ -1,13 +1,7 @@
-Now that we have Grafana instance running, lets jump on to installing python 3 and Grafanalib, which is required to generate the dashboards
+Now that we have Grafana instance running, lets jump on to installing Grafanalib, which is required to generate the dashboards
 
-To install python3, run the below command in the terminal on your right
 
-```
-sudo apt-get update
-sudo apt-get install python3.8 python3-pip
-```
-
-And now lets install Grafanalib python library:
+To install Grafanalib python library, run the below command in the terminal on your right :
 ```
 pip3 install grafanalib
 ```
@@ -29,7 +23,3 @@ optional arguments:
   --output OUTPUT, -o OUTPUT
                         Where to write the dashboard JSON
 ```
-
-
-
-
