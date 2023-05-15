@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "title": "Dashboards as Code",
+      "description": "How to manage Grafana Dashboards as Code using Grafanalib",
+      "path": "dashboards-as-code"
+    },
+    {
       "title": "Drone CI",
       "description": "CI with drone.io will ensure students are comfortable with both the local exec (and eventual web environment) of drone and its pipelines.",
       "path": "drone-ci"
