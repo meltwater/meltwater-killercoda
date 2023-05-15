@@ -10,11 +10,12 @@ cd grafana/devenv
 ./setup.sh
 ```{{copy}}
 
-```cd ..
+```
+cd ..
 ```{{copy}}
 
 ```
-make devenv sources=grafana,prometheus
+make devenv sources=grafana grafana_version=9.4.0,prometheus
 ```{{copy}}
 
 # To tear down later: `make devenv-down`
