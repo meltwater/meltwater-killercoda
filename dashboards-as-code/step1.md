@@ -15,7 +15,7 @@ cd ..
 ```{{copy}}
 
 ```
-make devenv sources=grafana grafana_version=9.4.0,prometheus
+make devenv sources=grafana,prometheus grafana_version=9.4.3
 ```{{copy}}
 
 # To tear down later: `make devenv-down`
