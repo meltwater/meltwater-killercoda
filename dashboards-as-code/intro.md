@@ -8,5 +8,6 @@ Grafanalib is a python library by Waveworks, which lets you generate dashboards 
 
 In this scenario, you'll learn:
 
-1. Generate dashboard using Grafanalib library
-2. Adding Rows and panels into the dashboard
+1. Why manage Dashbaords as Code?
+2. Generate dashboard using Grafanalib library
+3. Adding Rows and panels into the dashboard

@@ -4,12 +4,16 @@
     "details": {
       "steps": [
         {
-          "title": "Step 1 : Grafana Playground ",
+          "title": "Step 1 : Why Manage Dashboards as Code ",
           "text": "step1.md"
         },
         {
-          "title": "Step 2: Install Grafanalib",
+          "title": "Step 2 : Grafana Playground ",
           "text": "step2.md"
+        },
+        {
+          "title": "Step 3: Install Grafanalib",
+          "text": "step3.md"
         }
       ],
       "intro": {
