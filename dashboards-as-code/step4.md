@@ -1,6 +1,10 @@
-Let's learn to write a simple python script that will generate a dashboard json file and have it deployed to Grafana.
+Let's learn to write a simple python script using Grafanalib library, that will generate a dashboard json file and have it deployed to Grafana.
 
-From grafanalib.core library import the required planel types, dashboard type and other required functions to upload and get dashboard json from Grafana. Copy and paste the below code block into dashboard.py file, which you can find under `Editor` tab.
+From grafanalib.core library import the required planel types, dashboard type and other required functions to upload and get dashboard json from Grafana.
+Copy and paste the below code block into `dashboard.py` file, which you can found under `Editor` tab.
+
+Here `GRAFANA_API_KEY` and `GRAFANA_SERVER` are provided as environmental variables in later stage.
+
 
 ```
 from grafanalib.core import Dashboard, TimeSeries, GaugePanel,Target, GridPos, OPS_FORMAT, Template,Templating, Table, TABLE_TARGET_FORMAT, Column
@@ -45,8 +49,10 @@ grafana_api_key = getenv("GRAFANA_API_KEY")
 grafana_server = getenv("GRAFANA_SERVER")
 ```{{copy}}
 
-Create a dashboard instance with all the required fields, like the dashboard title, description, tags, panels just like you would create a dashboard in Grafana UI.
-Add the panels into the dashboard as well, we are using prometheus datasource here
+
+Create a dashboard instance with all the required fields, like the dashboard title, description, tags, panels just like you would create a dashboard with panels in Grafana UI.
+We are using prometheus datasource here for ur example dashboard
+
 
 ```
 my_dashboard = Dashboard(
@@ -90,4 +96,4 @@ my_dashboard_json = get_dashboard_json(my_dashboard, overwrite=True)
 upload_to_grafana(my_dashboard_json, grafana_server, grafana_api_key)
 ```{{copy}}
 
-Here we are creating a dashboard with just two panels of type TimeSeries with Prometheus Datasource. One of the panels is querying `scrape_duration_seconds` prometheus metric, while the other is querying `prometheus_config_last_reload_success_timestamp_seconds` prometheus metric.
+You can see that we are creating a dashboard with just two panels of type TimeSeries with Prometheus Datasource. One of the panels is querying `scrape_duration_seconds` prometheus metric, while the other is querying `prometheus_config_last_reload_success_timestamp_seconds` prometheus metric.
