@@ -4,12 +4,12 @@ Now that we have Grafana instance running, lets jump on to installing Grafanalib
 To install Grafanalib python library, run the below command in the terminal on your right :
 ```
 pip3 install grafanalib
-```
+```{{copy}}
 
 To verify if the Grafanalib installation was successful, run the below command:
 ```
 generate-dashboard --help
-```
+```{{copy}}
 
 This should complete with a message like:
 ```

@@ -1,13 +1,9 @@
 Let's learn to write a simple python script that will generate a dashboard json file and have it deployed to Grafana.
 
-From grafanalib.core library import the required planel types, dashboard type and other required functions to upload and get dashboard json from Grafana.
+From grafanalib.core library import the required planel types, dashboard type and other required functions to upload and get dashboard json from Grafana. Copy and paste the below code block into dashboard.py file, which you can find under `Editor` tab.
 
 ```
-from grafanalib.core import (
-    Dashboard, TimeSeries, GaugePanel,
-    Target, GridPos,
-    OPS_FORMAT
-)
+from grafanalib.core import Dashboard, TimeSeries, GaugePanel,Target, GridPos, OPS_FORMAT, Template,Templating, Table, TABLE_TARGET_FORMAT, Column
 from grafanalib._gen import DashboardEncoder
 import json
 import requests
@@ -40,13 +36,13 @@ def upload_to_grafana(json, server, api_key, verify=True):
     '''
 
     headers = {'Authorization': f"Bearer {api_key}", 'Content-Type': 'application/json'}
-    r = requests.post(f"https://{server}/api/dashboards/db", data=json, headers=headers, verify=verify)
+    r = requests.post(f"{server}/api/dashboards/db", data=json, headers=headers, verify=verify)
     # TODO: add error handling
     print(f"{r.status_code} - {r.content}")
 
 
-grafana_api_key = getenv("<API-KEY>")
-grafana_server = getenv({{TRAFFIC_HOST1_3001}})
+grafana_api_key = getenv("GRAFANA_API_KEY")
+grafana_server = getenv("GRAFANA_SERVER")
 ```{{copy}}
 
 Create a dashboard instance with all the required fields, like the dashboard title, description, tags, panels just like you would create a dashboard in Grafana UI.
@@ -57,7 +53,6 @@ my_dashboard = Dashboard(
     title="Prometheus 2.0 Overview",
     editable=False,
     description="Example dashboard using Prometheus datasource",
-    templating = Templating([datasource_variable, prometheus_hosts_variable, custom_label_name, custom_label_value]),
     
     tags=[
         'Dashboard-As-Code',
@@ -65,18 +60,6 @@ my_dashboard = Dashboard(
     ],
     timezone="browser",
     panels=[
-        TimeSeries(
-            title="Uptime",
-            description="Percentage of uptime during the most recent $interval period.  Change the period with the 'interval' dropdown above."
-            dataSource='default',
-            targets=[
-                Target(
-                    datasource='gdev-prometheus',
-                    expr='avg(avg_over_time(up{instance="localhost:9090",job="prometheus"}[$interval]) * 100)',
-                ),
-            ],
-            gridPos=GridPos(h=8, w=8, x=0, y=0),
-        ),
         TimeSeries(
             title="Scrape Duration",
             dataSource='default',
@@ -90,9 +73,10 @@ my_dashboard = Dashboard(
         ),
         TimeSeries(
             title="Minutes Since Successful Config Reload",
-            dataSource='gdev-prometheus',
+            dataSource='default',
             targets=[
                 Target(
+                    datasource='gdev-prometheus',
                     expr='(time() - prometheus_config_last_reload_success_timestamp_seconds{job="prometheus",instance="localhost:9090"}) / 60',
                 ),
             ],
@@ -104,6 +88,6 @@ my_dashboard = Dashboard(
 
 my_dashboard_json = get_dashboard_json(my_dashboard, overwrite=True)
 upload_to_grafana(my_dashboard_json, grafana_server, grafana_api_key)
-```
+```{{copy}}
 
 To learn more about how to use Grafanalib to generate dashboards check out https://grafanalib.readthedocs.io/en/stable/getting-started.html
