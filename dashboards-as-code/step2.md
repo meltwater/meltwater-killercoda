@@ -1,21 +1,25 @@
-A Grafana playground with prometheus added as datasource is running in background, which is where you will be creating a new dashboard as code, to verify run the below command in the terminal
+Let's start with installing Grafanalib, which is required to generate the dashboards in Grafana
 
+
+To install Grafanalib python library, run the below command in the terminal on your right :
 ```
-docker ps
-```{{exec}}
+pip3 install grafanalib
+```{{copy}}
 
-It may take couple of minutes for the docker containers to become active.
-You will see that Grafana version 9.4.3 docker conatiner is running along with few other conatiners.
+To verify if the Grafanalib installation was successful, run the below command:
+```
+generate-dashboard --help
+```{{copy}}
 
+This should complete with a message like:
+```
+usage: generate-dashboard [-h] [--output OUTPUT] DASHBOARD
 
-To tear down later, part of last step: `make devenv-down`
+positional arguments:
+  DASHBOARD             Path to dashboard definition
 
-Now, verify you can access grafana UI by clicking the below link
-[Grafana UI]({{TRAFFIC_HOST1_3001}})
-
-
-Log in with user `admin` and password `admin`.
-
-Google Chrome may suggest you to change the Password, hit skip and you will be taken to Grafana home page.
-
-Navigate to Explore mode on the lefthand navigation bar, choose gdev-prometheus as data source and query an example metric such as counters_logins. If it shows data, you are ready to use grafana instance to add dashboard using Grafanalib.
+optional arguments:
+  -h, --help            show this help message and exit
+  --output OUTPUT, -o OUTPUT
+                        Where to write the dashboard JSON
+```

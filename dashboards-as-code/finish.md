@@ -1,7 +1,7 @@
-You have so far learned to manage a simple Dashboard using Grafanalib, you can similarly manage complex dashboards using Grafanalib.
+You have so far learned how to manage a simple Dashboard using Grafanalib, you can similarly manage complex dashboards using Grafanalib.
 
 
-Let's stop all the docker conatiners before closing out this tutorial by running the below command
+Let's stop all the docker conatiners before closing out this course by running the below command
 ```
 docker ps -aq | xargs docker stop | xargs docker rm
 ```{{copy}}

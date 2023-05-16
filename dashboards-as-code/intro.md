@@ -1,8 +1,8 @@
-Welcome to Dashboards as Code course! By the end of this, course you should be able to manage Grafana dashboards as code using Grafanalib. As part of the course you will be bringing up a Grafana instance, where the dashboard written in Python using Grafanalib will be added.
+Welcome to Dashboards as Code course! In this course you will be learning about managing Grafana Dashboards as Code using Grafanalib.
 
 ## Grafanalib
 
-Grafanalib is a python library by Waveworks, which lets you generate dashboards inside Grafana.
+Grafanalib is a python library by Waveworks, which lets you generate and modify Grafana dashboards.
 
 ## Agenda
 
@@ -10,4 +10,3 @@ In this scenario, you'll learn:
 
 1. Why manage Dashbaords as Code?
 2. Generate dashboard using Grafanalib library
-3. Adding Rows and panels into the dashboard
