@@ -50,10 +50,10 @@ Add the panels into the dashboard as well, we are using prometheus datasource he
 
 ```
 my_dashboard = Dashboard(
-    title="Prometheus 2.0 Overview",
+    title="Prometheus 2.0 Overview - KillerCoda",
     editable=False,
     description="Example dashboard using Prometheus datasource",
-    
+
     tags=[
         'Dashboard-As-Code',
         'killercoda'
@@ -90,4 +90,4 @@ my_dashboard_json = get_dashboard_json(my_dashboard, overwrite=True)
 upload_to_grafana(my_dashboard_json, grafana_server, grafana_api_key)
 ```{{copy}}
 
-To learn more about how to use Grafanalib to generate dashboards check out https://grafanalib.readthedocs.io/en/stable/getting-started.html
+Here we are creating a dashboard with just two panels of type TimeSeries with Prometheus Datasource. One of the panels is querying `scrape_duration_seconds` prometheus metric, while the other is querying `prometheus_config_last_reload_success_timestamp_seconds` prometheus metric.
