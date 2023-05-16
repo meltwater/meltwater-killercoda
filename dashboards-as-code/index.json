@@ -14,6 +14,14 @@
         {
           "title": "Step 3: Install Grafanalib",
           "text": "step3.md"
+        },
+        {
+          "title": "Step 4: Python Script using Grafanalib library to generate dashboard",
+          "text": "step4.md"
+        },
+        {
+          "title": "Step 5: Generating API key & deploying the dashboard to Grafana Instance",
+          "text": "step5.md"
         }
       ],
       "intro": {
