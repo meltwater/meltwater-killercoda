@@ -16,4 +16,6 @@ Now, verify you can access grafana UI by clicking the below link
 
 Log in with user `admin` and password `admin`.
 
+Google Chrome may suggest you to change the Password, hit skip and you will be taken to Grafana home page.
+
 Navigate to Explore mode on the lefthand navigation bar, choose gdev-prometheus as data source and query an example metric such as counters_logins. If it shows data, you are ready to use grafana instance to add dashboard using Grafanalib.
