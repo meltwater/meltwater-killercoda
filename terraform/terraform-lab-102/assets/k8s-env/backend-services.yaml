@@ -1,0 +1,259 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: localstack
+spec:
+  type: NodePort
+  ports:
+    - name: localstack-gw
+      protocol: TCP
+      port: 4566
+      targetPort: localstack-gw
+      #nodePort: 30566
+    - name: localstack-ext-10
+      protocol: TCP
+      port: 4510
+      targetPort: localstack-ext-10
+      #nodePort: 31510
+    - name: localstack-ext-11
+      protocol: TCP
+      port: 4511
+      targetPort: localstack-ext-11
+      #nodePort: 31511
+    - name: localstack-ext-12
+      protocol: TCP
+      port: 4512
+      targetPort: localstack-ext-12
+      #nodePort: 31512
+    - name: localstack-ext-13
+      protocol: TCP
+      port: 4513
+      targetPort: localstack-ext-13
+      #nodePort: 31513
+    - name: localstack-ext-14
+      protocol: TCP
+      port: 4514
+      targetPort: localstack-ext-14
+      #nodePort: 31514
+    - name: localstack-ext-15
+      protocol: TCP
+      port: 4515
+      targetPort: localstack-ext-15
+      #nodePort: 31515
+    - name: localstack-ext-16
+      protocol: TCP
+      port: 4516
+      targetPort: localstack-ext-16
+      #nodePort: 31516
+    - name: localstack-ext-17
+      protocol: TCP
+      port: 4517
+      targetPort: localstack-ext-17
+      #nodePort: 31517
+    - name: localstack-ext-18
+      protocol: TCP
+      port: 4518
+      targetPort: localstack-ext-18
+      #nodePort: 31518
+    - name: localstack-ext-19
+      protocol: TCP
+      port: 4519
+      targetPort: localstack-ext-19
+      #nodePort: 31519
+    - name: localstack-ext-20
+      protocol: TCP
+      port: 4520
+      targetPort: localstack-ext-20
+      #nodePort: 31520
+    - name: localstack-ext-21
+      protocol: TCP
+      port: 4521
+      targetPort: localstack-ext-21
+      #nodePort: 31521
+    - name: localstack-ext-22
+      protocol: TCP
+      port: 4522
+      targetPort: localstack-ext-22
+      #nodePort: 31522
+    - name: localstack-ext-23
+      protocol: TCP
+      port: 4523
+      targetPort: localstack-ext-23
+      #nodePort: 31523
+    - name: localstack-ext-24
+      protocol: TCP
+      port: 4524
+      targetPort: localstack-ext-24
+      #nodePort: 31524
+    - name: localstack-ext-25
+      protocol: TCP
+      port: 4525
+      targetPort: localstack-ext-25
+      #nodePort: 31525
+    - name: localstack-ext-26
+      protocol: TCP
+      port: 4526
+      targetPort: localstack-ext-26
+      #nodePort: 31526
+    - name: localstack-ext-27
+      protocol: TCP
+      port: 4527
+      targetPort: localstack-ext-27
+      #nodePort: 31527
+    - name: localstack-ext-28
+      protocol: TCP
+      port: 4528
+      targetPort: localstack-ext-28
+      #nodePort: 31528
+    - name: localstack-ext-29
+      protocol: TCP
+      port: 4529
+      targetPort: localstack-ext-29
+      #nodePort: 31529
+    - name: localstack-ext-30
+      protocol: TCP
+      port: 4530
+      targetPort: localstack-ext-30
+      #nodePort: 31530
+    - name: localstack-ext-31
+      protocol: TCP
+      port: 4531
+      targetPort: localstack-ext-31
+      #nodePort: 31531
+    - name: localstack-ext-32
+      protocol: TCP
+      port: 4532
+      targetPort: localstack-ext-32
+      #nodePort: 31533
+    - name: localstack-ext-33
+      protocol: TCP
+      port: 4533
+      targetPort: localstack-ext-33
+      #nodePort: 31533
+    - name: localstack-ext-34
+      protocol: TCP
+      port: 4534
+      targetPort: localstack-ext-34
+      #nodePort: 31534
+    - name: localstack-ext-35
+      protocol: TCP
+      port: 4535
+      targetPort: localstack-ext-35
+      #nodePort: 31535
+    - name: localstack-ext-36
+      protocol: TCP
+      port: 4536
+      targetPort: localstack-ext-36
+      #nodePort: 31536
+    - name: localstack-ext-37
+      protocol: TCP
+      port: 4537
+      targetPort: localstack-ext-37
+      #nodePort: 31537
+    - name: localstack-ext-38
+      protocol: TCP
+      port: 4538
+      targetPort: localstack-ext-38
+      #nodePort: 31538
+    - name: localstack-ext-39
+      protocol: TCP
+      port: 4539
+      targetPort: localstack-ext-39
+      #nodePort: 31539
+    - name: localstack-ext-40
+      protocol: TCP
+      port: 4540
+      targetPort: localstack-ext-40
+      #nodePort: 31540
+    - name: localstack-ext-41
+      protocol: TCP
+      port: 4541
+      targetPort: localstack-ext-41
+      #nodePort: 31541
+    - name: localstack-ext-42
+      protocol: TCP
+      port: 4542
+      targetPort: localstack-ext-42
+      #nodePort: 31542
+    - name: localstack-ext-43
+      protocol: TCP
+      port: 4543
+      targetPort: localstack-ext-43
+      #nodePort: 31543
+    - name: localstack-ext-44
+      protocol: TCP
+      port: 4544
+      targetPort: localstack-ext-44
+      #nodePort: 31544
+    - name: localstack-ext-45
+      protocol: TCP
+      port: 4545
+      targetPort: localstack-ext-45
+      #nodePort: 31545
+    - name: localstack-ext-46
+      protocol: TCP
+      port: 4546
+      targetPort: localstack-ext-46
+      #nodePort: 31546
+    - name: localstack-ext-47
+      protocol: TCP
+      port: 4547
+      targetPort: localstack-ext-47
+      #nodePort: 31547
+    - name: localstack-ext-48
+      protocol: TCP
+      port: 4548
+      targetPort: localstack-ext-48
+      #nodePort: 31548
+    - name: localstack-ext-49
+      protocol: TCP
+      port: 4549
+      targetPort: localstack-ext-49
+      #nodePort: 31549
+    - name: localstack-ext-50
+      protocol: TCP
+      port: 4550
+      targetPort: localstack-ext-50
+      #nodePort: 31550
+    - name: localstack-ext-51
+      protocol: TCP
+      port: 4551
+      targetPort: localstack-ext-51
+      #nodePort: 31551
+    - name: localstack-ext-52
+      protocol: TCP
+      port: 4552
+      targetPort: localstack-ext-52
+      #nodePort: 31552
+    - name: localstack-ext-53
+      protocol: TCP
+      port: 4553
+      targetPort: localstack-ext-53
+      #nodePort: 31553
+    - name: localstack-ext-54
+      protocol: TCP
+      port: 4554
+      targetPort: localstack-ext-54
+      #nodePort: 31554
+    - name: localstack-ext-56
+      protocol: TCP
+      port: 4556
+      targetPort: localstack-ext-56
+      #nodePort: 31556
+    - name: localstack-ext-57
+      protocol: TCP
+      port: 4557
+      targetPort: localstack-ext-57
+      #nodePort: 31557
+    - name: localstack-ext-58
+      protocol: TCP
+      port: 4558
+      targetPort: localstack-ext-58
+      #nodePort: 31558
+    - name: localstack-ext-59
+      protocol: TCP
+      port: 4559
+      targetPort: localstack-ext-59
+      #nodePort: 31559
+  selector:
+    app: localstack

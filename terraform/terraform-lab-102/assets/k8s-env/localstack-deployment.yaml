@@ -1,0 +1,142 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: localstack
+  labels:
+    app: localstack
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: localstack
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: localstack
+    spec:
+      containers:
+        - name: localstack
+          image: localstack/localstack
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+          volumeMounts:
+            - name: docker-socket
+              mountPath: /var/run/docker.sock
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: localstack-gw
+          ports:
+            - name: localstack-gw
+              containerPort: 4566
+            - name: localstack-ext-10
+              containerPort: 4510
+            - name: localstack-ext-11
+              containerPort: 4511
+            - name: localstack-ext-12
+              containerPort: 4512
+            - name: localstack-ext-13
+              containerPort: 4513
+            - name: localstack-ext-14
+              containerPort: 4514
+            - name: localstack-ext-15
+              containerPort: 4515
+            - name: localstack-ext-16
+              containerPort: 4516
+            - name: localstack-ext-17
+              containerPort: 4517
+            - name: localstack-ext-18
+              containerPort: 4518
+            - name: localstack-ext-19
+              containerPort: 4519
+            - name: localstack-ext-20
+              containerPort: 4520
+            - name: localstack-ext-21
+              containerPort: 4521
+            - name: localstack-ext-22
+              containerPort: 4522
+            - name: localstack-ext-23
+              containerPort: 4523
+            - name: localstack-ext-24
+              containerPort: 4524
+            - name: localstack-ext-25
+              containerPort: 4525
+            - name: localstack-ext-26
+              containerPort: 4526
+            - name: localstack-ext-27
+              containerPort: 4527
+            - name: localstack-ext-28
+              containerPort: 4528
+            - name: localstack-ext-29
+              containerPort: 4529
+            - name: localstack-ext-30
+              containerPort: 4530
+            - name: localstack-ext-31
+              containerPort: 4531
+            - name: localstack-ext-32
+              containerPort: 4532
+            - name: localstack-ext-33
+              containerPort: 4533
+            - name: localstack-ext-34
+              containerPort: 4534
+            - name: localstack-ext-35
+              containerPort: 4535
+            - name: localstack-ext-36
+              containerPort: 4536
+            - name: localstack-ext-37
+              containerPort: 4537
+            - name: localstack-ext-38
+              containerPort: 4538
+            - name: localstack-ext-39
+              containerPort: 4539
+            - name: localstack-ext-40
+              containerPort: 4540
+            - name: localstack-ext-41
+              containerPort: 4541
+            - name: localstack-ext-42
+              containerPort: 4542
+            - name: localstack-ext-43
+              containerPort: 4543
+            - name: localstack-ext-44
+              containerPort: 4544
+            - name: localstack-ext-45
+              containerPort: 4545
+            - name: localstack-ext-46
+              containerPort: 4546
+            - name: localstack-ext-47
+              containerPort: 4547
+            - name: localstack-ext-48
+              containerPort: 4548
+            - name: localstack-ext-49
+              containerPort: 4549
+            - name: localstack-ext-50
+              containerPort: 4550
+            - name: localstack-ext-51
+              containerPort: 4551
+            - name: localstack-ext-52
+              containerPort: 4552
+            - name: localstack-ext-53
+              containerPort: 4553
+            - name: localstack-ext-54
+              containerPort: 4554
+            - name: localstack-ext-56
+              containerPort: 4556
+            - name: localstack-ext-57
+              containerPort: 4557
+            - name: localstack-ext-58
+              containerPort: 4558
+            - name: localstack-ext-59
+              containerPort: 4559
+      volumes:
+        - name: docker-socket
+          hostPath:
+            path: /var/run/docker.sock
+            type: File
