@@ -21,7 +21,10 @@
         {
           "file": "k8s-env/*.*",
           "target": "~/"
-        }
+        },
+        {
+          "file": "terraform.tf",
+          "target": "~/"
       ]
     }
   },
