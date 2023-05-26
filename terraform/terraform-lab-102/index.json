@@ -1,0 +1,34 @@
+{
+  "title": "Terraform 102: Provider Basics (Alpha)",
+  "description": "This course is still being tested, but will seek to teach you how to use the AWS provider in a zero-cost environment with Localstack.",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1: Environment Bootstrap",
+        "text": "step1.md",
+        "foreground": "step1-foreground.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "courseBase.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "k8s-env/*.*",
+          "target": "~/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
