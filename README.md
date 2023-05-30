@@ -1,4 +1,4 @@
-# Meltwater Engineering Killercoda Courseware | [![Actions Status](https://github.com/meltwater/foundation-killercoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-killercoda/actions)
+# Meltwater Engineering Killercoda Courses | [![Actions Status](https://github.com/meltwater/foundation-killercoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-killercoda/actions)
 
 <img align="right" width="200" src="assets/kllr.png">Meltwater has a very complex tech stack, but many of its tools are ubiquitus and can be used / configured generically to provide those curious a base from which to build knowledge.  This library and the scenarios housed here are intended to provide this base knowledge while also serving as a playground or reference for technology refreshment.  Many of these courses may be referenced in https://underthehood.meltwater.com our engineering blog, provide introductory information to new-hires, or be used as a platform for internal knowledge transfer.
 
