@@ -1,16 +1,16 @@
-# Foundation Killercoda Courseware | [![Actions Status](https://github.com/meltwater/foundation-killercoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-killercoda/actions)
+# Meltwater Engineering Killercoda Courseware | [![Actions Status](https://github.com/meltwater/foundation-killercoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-killercoda/actions)
 
-<img align="right" width="200" src="assets/kllr.png">The Foundation Mission seeks to provide Meltwater engineering teams a Paved Road of tools and services across the full Software Development Life Cycle, so that ultimately they only need to solve problems specific to their domain.  This repository will house some of the standard toolsets used inside Meltwater for others to see and share.
+<img align="right" width="200" src="assets/kllr.png">Meltwater has a very complex tech stack, but many of its tools are ubiquitus and can be used / configured generically to provide those curious a base from which to build knowledge.  This library and the scenarios housed here are intended to provide this base knowledge while also serving as a playground or reference for technology refreshment.  Many of these courses may be referenced in https://underthehood.meltwater.com our engineering blog, provide introductory information to new-hires, or be used as a platform for internal knowledge transfer.
 
 ## Taking Courses
 
 We are looking to provide training senarios and groupings to help people through not only a current understanding but future-proofing their learning with tracking of the courses they have already taken alongside newer ones as time progresses.  To access our courses, all you should need is a web browser and a good internet connection:
 
-- https://www.killercoda.com/mw-fou
+- https://www.killercoda.com/meltwater
 
 ## Contributing
 
-While we are looking to work with forks and take pull requests, we would ask your patience while we figure this out in our current sprint where we will be focusing on the first set of courses.
+Anyone in Meltwater Engineering is welcome to commit new material to this repository, but the following must be adhered to in order to ensure the course is properly published to the main site.  Also, it has been stated multiple times, all trainings posted should be kept to the generic toolset, not Meltwater-specific configurations (unless showcasing an open-sourced project).
 
 ### Step 1: Structure
 
@@ -60,13 +60,7 @@ To edit a senario, please be considerate of the repo structure?
         └── scenario files...
 ```
 
-To create scenarios, follow the guides or an existing scenario and form a pull-request. This will start a testing proceedure visible on github actions.  Another option while available is to download and install the [Katacoda CLI](https://www.katacoda.com/cli) which is deliverd as a node package.  Here are some of the most useful commands from using it so far:
-
-* `katacoda scenarios:create`: This will create a templatized scenario (think about how many steps you will have first)
-* `katacoda scenarios:demo`: If you are like me and just wana see some code, this is your command, will generate a fully executable demo
-* `katacoda scenarios:add`: Will add steps and assets to a katacoda scenario
-* `katacoda scenarios:remove`: Will remove steps from a scenario
-* `katacoda scenarios:validate`: super useful in figuring out if you have officially lost your marbles while creating the thing.
+To create scenarios, follow the guides or an existing scenario and form a pull-request. This will start a testing proceedure visible on github actions.
 
 ### Step 3: Validate & Push
 
@@ -74,10 +68,10 @@ Since you need to be able to try it out online, you can use a personal account t
 
 Once you are satisfied and are observing valid code, give it a push!  This will automatically post the resources into Katacoda (typically within a minute) and you are free to reload scenarios and PLEASE test your changes out?
 
-- https://killercoda.com/mw-fou
+- https://killercoda.com/meltwater
 
 ## Maintianers
 
-This code-base and the Killercoda profile on killercoda.com are and will be maintained as a mission so that there is a consolidated place for code.
+This code-base and the Killercoda profile on killercoda.com are and will be maintained for the R&D organization so that there is a consolidated place for code.
 
-- @meltwater-foundation
+- @meltwater-a-team
