@@ -1,33 +1,33 @@
 {
   "items": [
     {
-      "title": "Dashboards as Code",
-      "description": "How to manage Grafana Dashboards as Code using Grafanalib",
-      "path": "dashboards-as-code"
-    },
-    {
       "title": "Drone CI",
-      "description": "CI with drone.io will ensure students are comfortable with both the local exec (and eventual web environment) of drone and its pipelines.",
+      "description": "Automate software building and testing. Drone by Harness is our self-service continuous integration platform.",
       "path": "drone-ci"
     },
     {
       "title": "ElastAlert",
-      "description": "How to write ElastAlert rules to alert on data in Elasticsearch",
+      "description": "EOL : Automated rule-based alerting for Elasticsearch.  While shortly to be decomissioned, this legacy toolkit works well for elastic implementations that are v5 and below.",
       "path": "elastalert"
     },
     {
+      "title": "Grafana",
+      "description": "Dashboard anything. Observe everything. Grafana is our single-pane of glass for telemetry data.",
+      "path": "grafana"
+    },
+    {
       "title": "Prometheus",
-      "description": "How to use Prometheus.io to monitor your applications and infrastructure.",
+      "description": "From metrics to insight, power your metrics and alerting with the leading open-source monitoring solution.  Prometheus is our premier poll-based metrics platform.",
       "path": "prometheus"
     },
     {
       "title": "StatsD",
-      "description": "Basics of StatsD and custom push-based metrics.",
+      "description": "Fire and forget statistical analysis on a push-based architecture.  StatsD is a strong legacy platforms that provides ease of implementation from hosts to serverless.",
       "path": "statsd"
     },
     {
       "title": "Terraform",
-      "description": "How to use Terraform",
+      "description": "Automate infrastructure on any cloud or service. Terraform IS infrastructure as code, and is how we build repeatable environments and solutions.",
       "path": "terraform"
     }
   ]
