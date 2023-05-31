@@ -14,7 +14,7 @@ Anyone in Meltwater Engineering is welcome to commit new material to this reposi
 
 ### Step 1: Structure
 
-There is a simplistic `structure.json` file that is present at the root of this repo and defines the top-level which can contain any number of courses beneath.  This json file works with the following options:
+There is a simplistic `structure.json` file that is present at the root of this repo and defines the top-level which can contain any number of components (Ex: 'elastic', 'grafana', 'drone') beneath.  This json file works with the following options, all we ask is that it be kept alphabetical:
 
 * `path`: The sub-directory of the course which will contain scenarios
 * `title`: Title of the course to appear at the root / index
@@ -52,7 +52,7 @@ To edit a senario, please be considerate of the repo structure?
 ```
 .
 ├── structure.json
-├── course/
+├── component/
     ├── secenario/
     └── secenario/
         ├── assets/
