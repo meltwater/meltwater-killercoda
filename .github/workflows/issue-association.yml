@@ -18,4 +18,4 @@ jobs:
         with:
           project-url: https://github.com/orgs/meltwater/projects/64
           github-token: ${{ secrets.REPO_ISSUES_TOKEN }}
-          labeled: team-a-ateam
+          labeled: team-a-team
