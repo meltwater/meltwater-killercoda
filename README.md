@@ -6,7 +6,7 @@
 
 We are looking to provide training senarios and groupings to help people through not only a current understanding but future-proofing their learning with tracking of the courses they have already taken alongside newer ones as time progresses.  To access our courses, all you should need is a web browser and a good internet connection:
 
-- https://www.killercoda.com/meltwater
+- https://killercoda.com/meltwater
 
 ## Contributing
 
