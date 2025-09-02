@@ -1,4 +1,4 @@
-# Meltwater Engineering Killercoda Courses | [![Actions Status](https://github.com/meltwater/foundation-killercoda/workflows/Validate%20Katacoda/badge.svg)](https://github.com/meltwater/foundation-killercoda/actions)
+# Meltwater Engineering Killercoda Courses | [![Actions Status](https://github.com/meltwater/foundation-killercoda/workflows/Validate%20Kllrcoda/badge.svg)](https://github.com/meltwater/foundation-killercoda/actions)
 
 <img align="right" width="200" src="assets/kllr.png">Meltwater has a very complex tech stack, but many of its tools are ubiquitus and can be used / configured generically to provide those curious a base from which to build knowledge.  This library and the scenarios housed here are intended to provide this base knowledge while also serving as a playground or reference for technology refreshment.  Many of these courses may be referenced in https://underthehood.meltwater.com our engineering blog, provide introductory information to new-hires, or be used as a platform for internal knowledge transfer.
 
@@ -53,20 +53,19 @@ To edit a senario, please be considerate of the repo structure?
 .
 ├── structure.json
 ├── component/
-    ├── secenario/
     └── secenario/
         ├── assets/
         ├── index.json
         └── scenario files...
 ```
 
-To create scenarios, follow the guides or an existing scenario and form a pull-request. This will start a testing proceedure visible on github actions.
+To create scenarios, follow the guides or an existing scenario and form a pull-request. This will start a testing proceedure visible on github actions.  From scratch, you can also custom tailor a scenario or use the [`killercoda-cli'](https://github.com/Piotr1215/killercoda-cli) to create a new scenario and walk you through all of the stages.
 
 ### Step 3: Validate & Push
 
-Since you need to be able to try it out online, you can use a personal account to do the testing in and publish here when completed, but the `katacoda scenarios:validate` command will be your friend checking the syntax in json and the file structure you have created.
+While most of the actual course constructs (json, file locations, etc) can be tested, the actual code placed in ssh files and any k8s yaml will not be tested in validation (it is syntaxical only to the scenario constructs).
 
-Once you are satisfied and are observing valid code, give it a push!  This will automatically post the resources into Katacoda (typically within a minute) and you are free to reload scenarios and PLEASE test your changes out?
+Once you are satisfied and are observing valid code, give it a push!  As long as the validation checks, the course will automatically post the resources into Kllrcoda (typically within a minute) and you are free to reload scenarios and PLEASE test your changes out?
 
 - https://killercoda.com/meltwater
 
