@@ -1,9 +1,0 @@
-heartbeat.monitors:
-- type: http
-  schedule: '@every 5s'
-  urls:
-    - http://elasticsearch:9200
-
-output.elasticsearch:
-  hosts: ['http://elasticsearch:9200']
-  index: "heartbeat"
