@@ -48,7 +48,7 @@ jobs:
       run: |
         cwd=$(pwd)
         for scenario in ${ALL_CHANGED_DIRS}; do
-          echo TESTING $class
-          cd $cwd/$class
+          echo TESTING $scenario
+          cd $cwd/$scenario
           killercoda-cli validate
         done
