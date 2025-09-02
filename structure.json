@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "Drone CI",
-      "description": "Automate software building and testing. Drone by Harness is our self-service continuous integration platform.",
-      "path": "drone-ci"
-    },
-    {
-      "title": "ElastAlert",
-      "description": "EOL : Automated rule-based alerting for Elasticsearch.  While shortly to be decomissioned, this legacy toolkit works well for elastic implementations that are v5 and below.",
-      "path": "elastalert"
-    },
-    {
       "title": "Grafana",
       "description": "Dashboard anything. Observe everything. Grafana is our single-pane of glass for telemetry data.",
       "path": "grafana"

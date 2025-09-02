@@ -1,8 +1,0 @@
-rules_folder: alert_rules
-es_host: localhost
-es_port: 9200
-writeback_index: elastalert_status
-run_every:
-  seconds: 10
-buffer_time:
-  minutes: 1
